@@ -1,9 +1,9 @@
 import "./nav.css";
-import home from "../assets/images/Home.png";
-import search from "../assets/images/search.png";
-import create from "../assets/images/Plus square.png";
-import favorite from "../assets/images/Heart.png";
 import avatar from "../assets/images/Generic avatar (2).png";
+import favorite from "../assets/images/Heart.png";
+import home from "../assets/images/Home.png";
+import create from "../assets/images/Plus square.png";
+import search from "../assets/images/search.png";
 
 function Nav() {
   return (

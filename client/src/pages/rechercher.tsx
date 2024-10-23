@@ -1,4 +1,4 @@
-import "./rechercher.css"
+import "./rechercher.css";
 
 function Rechercher() {
   return <></>;
