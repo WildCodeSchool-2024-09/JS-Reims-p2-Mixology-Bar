@@ -1,8 +1,8 @@
-import "./rechercher.css";
+import "./Compte.css";
 import Header from "../components/header";
 import Nav from "../components/nav";
 
-function Recherche() {
+function Avatar() {
   return (
     <>
       <Header />
@@ -11,4 +11,4 @@ function Recherche() {
   );
 }
 
-export default Recherche;
+export default Avatar;
