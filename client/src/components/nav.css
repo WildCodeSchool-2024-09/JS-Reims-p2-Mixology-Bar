@@ -5,6 +5,10 @@ nav {
   justify-content: space-between;
   padding: 0 1rem;
   background-color: var(--nav-color);
+  border-top-style: solid;
+  border-top-color: #ea00ff;
+  box-shadow: var(--box-shadow-top);
+  margin-top: 3rem;
 }
 
 nav img {
