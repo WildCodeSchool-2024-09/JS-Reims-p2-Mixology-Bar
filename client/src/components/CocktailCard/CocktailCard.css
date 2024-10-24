@@ -17,6 +17,12 @@
   min-height: 450px;
 }
 
+@media (max-width: 768px) {
+  .cocktail-card {
+    display: none;
+  }
+}
+
 .cocktail-card:hover {
   transform: scale(1.05);
 }
