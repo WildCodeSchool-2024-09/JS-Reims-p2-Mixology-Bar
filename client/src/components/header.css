@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 8vh;
+  background-color: var(--header-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid;
+  border-bottom-color: var(--primary-color);
+  box-shadow: var(--box-shadow-bottom);
+}
+
+header h1 {
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  text-shadow: var(--text-shadow);
+}
