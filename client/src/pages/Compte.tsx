@@ -1,14 +1,11 @@
 import "./Compte.css";
-import Header from "../components/Header/Header";
-import Nav from "../components/nav/Navbar";
 
-function Avatar() {
+function Compte() {
   return (
     <>
-      <Header />
-      <Nav />
+      <h1>avatar</h1>
     </>
   );
 }
 
-export default Avatar;
+export default Compte;
