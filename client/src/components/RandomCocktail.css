@@ -1,0 +1,71 @@
+:root {
+  --primary-color: #ea00ff;
+  --background-color: linear-gradient(#060005, #250224);
+  --header-color: #060005;
+  --nav-color: #250224;
+  --primary-card-color: rgba(234, 0, 255, 0.1);
+  --secondary-card-color: rgba(234, 0, 255, 0.05);
+  --box-shadow-top: 0px 5px 8px rgba(234, 0, 255, 0.25);
+  --box-shadow-bottom: 0px -5px 8px rgba(234, 0, 255, 0.25);
+  --text-shadow: 0px 0px 25px #ea00ff;
+  --font-family: "Tilt Neon";
+}
+
+.btnrandom {
+  display: flex;
+  height: 25px;
+  width: 65px;
+  font-family: var(--font-family);
+  font-style: normal;
+  text-shadow: var(--text-shadow);
+  box-shadow: var(--box-shadow-bottom);
+  box-shadow: var(--box-shadow-top);
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  border-radius: 15%;
+  border-style: none;
+  background-color: #ea00ff86;
+}
+.btnrandom:hover {
+  background-color: #250224;
+}
+
+.random-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+h3 {
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  text-shadow: var(--text-shadow);
+}
+.imgCkt {
+  display: flex;
+  height: 180px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-top: 0.4rem;
+  gap: 1rem;
+  box-shadow: 10px 10px 10px rgb(127, 104, 127);
+}
+.cktname {
+  color: aliceblue;
+  font-size: medium;
+  text-align: center;
+}
+
+/* .randomCard {
+  width: 220px;
+  height: 250px;
+  background-color: var(--primary-card-color);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
