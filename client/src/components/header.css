@@ -3,19 +3,6 @@
   margin: 0;
 }
 
-:root {
-  --primary-color: #ea00ff;
-  --background-color: linear-gradient(#060005, #250224);
-  --header-color: #060005;
-  --nav-color: #250224;
-  --primary-card-color: rgba(234, 0, 255, 0.1);
-  --secondary-card-color: rgba(234, 0, 255, 0.05);
-  --box-shadow-bottom: 0px 5px 8px rgba(234, 0, 255, 0.25);
-  --box-shadow-top: 0px -5px 8px rgba(234, 0, 255, 0.25);
-  --text-shadow: 0px 0px 25px #ea00ff;
-  --font-family: "Tilt Neon";
-}
-
 header {
   height: 8vh;
   background-color: var(--header-color);
