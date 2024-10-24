@@ -40,17 +40,19 @@ const CocktailCard = ({ cocktailId }) => {
           alt={cocktail.strDrink}
           className="cocktail-image"
         />
-        <div className="cocktail-info">
-          <h3>{cocktail.strDrink}</h3>
-          <p>{cocktail.strInstructions}</p>
+        <div className="cocktail-content">
+          <div className="cocktail-info">
+            <h2>{cocktail.strDrink}</h2>
+            <p>{cocktail.strInstructions}</p>
+          </div>
+          <button
+            type="button"
+            className={`favorite-button ${isFavorite ? "favorited" : ""}`}
+            onClick={toggleFavorite}
+          >
+            {isFavorite ? "❤️" : "🤍"}
+          </button>
         </div>
-        <button
-          type="button"
-          className={`favorite-button ${isFavorite ? "favorited" : ""}`}
-          onClick={toggleFavorite}
-        >
-          {isFavorite ? "❤️" : "🤍"}
-        </button>
       </div>
     </div>
   );
