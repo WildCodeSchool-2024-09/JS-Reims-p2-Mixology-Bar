@@ -46,18 +46,21 @@ h3 {
 }
 .imgCkt {
   display: flex;
-  height: 85%;
-  width: 85%;
+  height: 180px;
+  width: 120px;
   object-fit: cover;
   border-radius: 15px;
   margin-top: 0.4rem;
   gap: 1rem;
+  box-shadow: 10px 10px 10px rgb(127, 104, 127);
 }
 .cktname {
   color: aliceblue;
+  font-size: medium;
+  text-align: center;
 }
 
-.randomCard {
+/* .randomCard {
   width: 220px;
   height: 250px;
   background-color: var(--primary-card-color);
@@ -65,8 +68,4 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.randomCard h2 {
-  font-size: medium;
-}
+} */

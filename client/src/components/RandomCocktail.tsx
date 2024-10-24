@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import "./RandomCocktail.css";
-
 interface RandomCocktail {
   strDrink: string;
   strDrinkThumb: string;
