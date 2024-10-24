@@ -32,9 +32,6 @@
   border-radius: 10px;
 }
 
-.cocktail-info {
-}
-
 .cocktail-info h2 {
   color: var(--primary-color);
   text-align: center;
