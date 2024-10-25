@@ -1,4 +1,6 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
+import PopularCocktailCarousel from "./components/PopularCocktailCarousel/PopularCocktailCarousel";
 import Header from "./components/header";
 import Nav from "./components/nav";
 
@@ -10,6 +12,8 @@ function App() {
       <Header />
       <RandomCocktail />
       <Nav />
+      <PopularCocktailCarousel />
+      <Outlet />
     </>
   );
 }
