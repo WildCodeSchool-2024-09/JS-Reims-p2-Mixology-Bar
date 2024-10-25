@@ -1,0 +1,95 @@
+.carousel {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scroll-carousel {
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 24vh;
+    /* perspective: 1000px;  */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+  }
+
+  .carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+    width: 70%;
+    height: 100%;
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 55%;
+    height: 20vh;
+    background-color: #1b1b1e;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-align: center;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    /* animation: scroll 10s ease-in-out infinite; */
+    animation: scroll 10s infinite linear;
+    animation-direction: alternate;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    20% {
+      transform: translate3d(-200%, 0, 0);
+    }
+    40% {
+      transform: translate3d(-400%, 0, 0);
+    }
+    60% {
+      transform: translate3d(-600%, 0, 0);
+    }
+    80% {
+      transform: translate3d(-800%, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1000%, 0, 0);
+    }
+  }
+
+  .carousel-item img {
+    width: 85%;
+    height: 60%;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-top: 0.4rem;
+  }
+
+  .carousel-item h3 {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+}
+
+.error-message {
+  color: #ff4040;
+  background-color: #fff5f5;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
