@@ -68,8 +68,7 @@
     100% {
       transform: translate3d(-1000%, 0, 0);
     }
-}
-
+  }
 
   .carousel-item img {
     width: 85%;
