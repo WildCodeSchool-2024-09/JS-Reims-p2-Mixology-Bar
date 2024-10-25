@@ -1,13 +1,16 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Nav from "./components/nav/Navbar";
+import PopularCocktailCarousel from "./components/PopularCocktailCarousel/PopularCocktailCarousel";
+import Header from "./components/header";
+import Nav from "./components/nav";
 
 function App() {
   return (
     <>
       <Header />
-
       <Nav />
+      <PopularCocktailCarousel />
+      <Outlet />
     </>
   );
 }
