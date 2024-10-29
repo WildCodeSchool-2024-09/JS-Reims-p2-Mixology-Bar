@@ -11,7 +11,7 @@ header {
   align-items: center;
   border-bottom: solid;
   border-bottom-color: var(--primary-color);
-  box-shadow: var(--box-shadow-bottom);
+  box-shadow: var(--box-shadow-top);
 }
 
 header h1 {
