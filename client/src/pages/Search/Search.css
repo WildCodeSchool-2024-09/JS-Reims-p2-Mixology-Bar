@@ -1,5 +1,5 @@
 .searchbar {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@
 }
 
 .all {
-  height: 640px;
+  height: 625px;
 }
 
 .filtres {
@@ -39,6 +39,7 @@
   color: #d300e6;
   font-size: 2rem;
   font-family: var(--font-family);
+  text-shadow: var(--text-shadow);
 }
 
 .filtre-2 button {
@@ -53,4 +54,5 @@
   color: #d300e6;
   font-size: 2rem;
   font-family: var(--font-family);
+  text-shadow: var(--text-shadow);
 }
