@@ -2,8 +2,15 @@ import { useEffect, useState } from "react";
 import "./PopularCocktailCarousel.css";
 import { Link } from "react-router-dom";
 
+interface Cocktail {
+  strDrinkThumb: string;
+  strDrink: string;
+  strInstructions: string;
+  idDrink: number;
+}
+
 const PopularCocktailCarousel = () => {
-  const [popularCocktails, setPopularCocktails] = useState([]);
+  const [popularCocktails, setPopularCocktails] = useState<Cocktail[]>([]);
 
   useEffect(() => {
     const fetchPopularCocktails = async () => {
@@ -12,7 +19,7 @@ const PopularCocktailCarousel = () => {
           "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail",
         );
         const data = await response.json();
-        const topCocktails = data.drinks.slice(0, 10);
+        const topCocktails: Cocktail[] = data.drinks.slice(0, 10);
 
         const detailedCocktails = await Promise.all(
           topCocktails.map(async (drink) => {

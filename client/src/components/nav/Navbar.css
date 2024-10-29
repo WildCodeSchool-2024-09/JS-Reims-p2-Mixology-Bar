@@ -7,7 +7,7 @@ nav {
   background-color: var(--nav-color);
   border-top-style: solid;
   border-top-color: #ea00ff;
-  box-shadow: var(--box-shadow-top);
+  box-shadow: var(--box-shadow-bottom);
   margin-top: 3rem;
 }
 

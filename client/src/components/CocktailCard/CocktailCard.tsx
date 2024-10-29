@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./CocktailCard.css";
 
-const CocktailCard = ({ cocktailId }) => {
-  const [cocktail, setCocktail] = useState(null);
+interface Cocktail {
+  strDrinkThumb: string;
+  strDrink: string;
+  strInstructions: string;
+}
+
+const CocktailCard = ({ cocktailId }: { cocktailId: number }) => {
+  const [cocktail, setCocktail] = useState<Cocktail>();
   const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {

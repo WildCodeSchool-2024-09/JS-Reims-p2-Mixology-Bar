@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./CocktailDetails.css";
+
 interface CocktailDetails {
   strDrink: string;
   strDrinkThumb: string;
   strInstructions: string;
+  [key: string]: string | null;
 }
+
 const CocktailDetails = () => {
   const { id } = useParams();
-  const [cocktail, setCocktail] = useState(null);
+  const [cocktail, setCocktail] = useState<CocktailDetails>();
 
   useEffect(() => {
     const fetchCocktail = async () => {
@@ -20,7 +23,7 @@ const CocktailDetails = () => {
           throw new Error("Erreur de réseau");
         }
         const data = await response.json();
-        setCocktail(data.drinks[0]); // Accéder à l'objet de cocktail
+        setCocktail(data.drinks[0]);
       } catch (error) {
         console.error("Erreur lors de la récupération des données :", error);
       }
@@ -45,10 +48,9 @@ const CocktailDetails = () => {
       <ul>
         {Object.keys(cocktail)
           .filter((key) => key.startsWith("strIngredient") && cocktail[key])
-          .map((ingredient) => (
-            <li key={cocktail.idDrink}>
-              {cocktail[ingredient]}{" "}
-              {cocktail[`strMeasure${cocktail.idDrink + 1}`]}
+          .map((key, index) => (
+            <li key={key}>
+              {cocktail[key]} {cocktail[`strMeasure${index + 1}`] || ""}
             </li>
           ))}
       </ul>
