@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./PopularCocktailCarousel.css";
+import { Link } from "react-router-dom";
 
 interface Cocktail {
   strDrinkThumb: string;
@@ -47,6 +48,7 @@ const PopularCocktailCarousel = () => {
             <div key={cocktail.idDrink} className="carousel-item">
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
               <h3>{cocktail.strDrink}</h3>
+              <Link to={`/cocktail/${cocktail.idDrink}`}>Choisir</Link>
             </div>
           ))}
         </div>

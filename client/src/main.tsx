@@ -9,6 +9,7 @@ import Search from "./pages/Search/Search";
 
 // Import the main app component
 import App from "./App";
+import CocktailDetails from "./components/cocktailDetails/CocktailDetails";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -22,11 +23,16 @@ import App from "./App";
 // You can add more routes as you build out your app!
 const router = createBrowserRouter([
   {
+    path: "/",
     element: <App />, // Renders the App component for the home page
     children: [
       {
-        path: "/",
+        index: true,
         element: <Home />,
+      },
+      {
+        path: "/cocktail/:id",
+        element: <CocktailDetails />,
       },
       {
         path: "/search",
