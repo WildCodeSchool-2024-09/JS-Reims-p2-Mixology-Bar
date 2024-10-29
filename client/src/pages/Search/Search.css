@@ -1,0 +1,56 @@
+.searchbar {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imput {
+  width: 70vw;
+  background-color: var(--primary-card-color);
+  border: solid 1px #d300e6;
+  border-radius: 20px;
+  height: 1.75rem;
+  padding: 0 1rem;
+  color: aliceblue;
+}
+
+.all {
+  height: 640px;
+}
+
+.filtres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 660px;
+  justify-content: space-evenly;
+}
+
+.filtre-1 button {
+  background-color: var(--primary-card-color);
+  height: 13rem;
+  width: 15rem;
+  border-radius: 20px;
+  border: solid 0.5px #d300e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d300e6;
+  font-size: 2rem;
+  font-family: var(--font-family);
+}
+
+.filtre-2 button {
+  background-color: var(--primary-card-color);
+  height: 13rem;
+  width: 15rem;
+  border-radius: 20px;
+  border: solid 0.5px #d300e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d300e6;
+  font-size: 2rem;
+  font-family: var(--font-family);
+}
