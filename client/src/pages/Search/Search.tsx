@@ -13,7 +13,9 @@ function Search() {
             className="imput"
           />
         </div>
-
+        <div className="h3">
+          <h3>Recherche par filtres :</h3>
+        </div>
         <div className="filtres">
           <div className="filtre-1">
             <button type="button">Alcoolisés</button>
