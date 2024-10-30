@@ -1,5 +1,9 @@
-.cocktails {
-  display: flex;
-  justify-content: center;
+.cocktail-list {
   gap: 20px;
 }
+
+.cocktail-list .cocktail-item {
+  flex: 1 1 25%; 
+  box-sizing: border-box;
+  min-width: 200px;
+} 
