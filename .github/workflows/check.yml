@@ -6,22 +6,22 @@ on:
     branches:
       - develop
       - dev
-      
+
 jobs:
   check:
     name: Run checks
     runs-on: ubuntu-latest
-    
+
     permissions:
       checks: write
       contents: write
-      
+
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          
+
       - name: Setup Biome
         uses: biomejs/setup-biome@v2
 
