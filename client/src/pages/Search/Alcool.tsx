@@ -17,37 +17,21 @@ function Alcool() {
           <h3>Recherche par filtres :</h3>
         </div>
         <div className="filtres-alcool">
-          <div className="filtre-choix-2">
-            <button type="button">Acidulé</button>
-          </div>
+          <div className="filtre-choix-2">Acidulé</div>
 
-          <div className="filtre-choix-2">
-            <button type="button">Amer</button>
-          </div>
+          <div className="filtre-choix-2">Amer</div>
 
-          <div className="filtre-choix-2">
-            <button type="button">Corsé</button>
-          </div>
+          <div className="filtre-choix-2">Corsé</div>
 
-          <div className="filtre-choix-2">
-            <button type="button">Crémeux</button>
-          </div>
+          <div className="filtre-choix-2">Crémeux</div>
 
-          <div className="filtre-choix-2">
-            <button type="button">Epicé</button>
-          </div>
+          <div className="filtre-choix-2">Epicé</div>
 
-          <div className="filtre-choix-2">
-            <button type="button">Fruité</button>
-          </div>
+          <div className="filtre-choix-2">Fruité</div>
 
-          <div className="filtre-choix-2">
-            <button type="button">Pétillant</button>
-          </div>
+          <div className="filtre-choix-2">Pétillant</div>
 
-          <div className="filtre-choix-2">
-            <button type="button">Salé</button>
-          </div>
+          <div className="filtre-choix-2">Salé</div>
         </div>
       </div>
     </>

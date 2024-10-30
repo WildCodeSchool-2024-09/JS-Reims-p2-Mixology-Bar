@@ -18,17 +18,11 @@ function SearchCard() {
         </div>
         <div className="filtres">
           <div className="filtre">
-            <Link to="alcool">
-              {" "}
-              <button type="button">Alcoolisés</button>
-            </Link>
+            <Link to="alcool"> Alcoolisés</Link>
           </div>
 
           <div className="filtre">
-            <Link to="non-alcool">
-              {" "}
-              <button type="button">Non alcoolisés</button>
-            </Link>
+            <Link to="non-alcool"> Non alcoolisés</Link>
           </div>
         </div>
       </div>

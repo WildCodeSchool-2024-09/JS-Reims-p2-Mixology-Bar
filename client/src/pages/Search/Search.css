@@ -45,9 +45,11 @@
 
 .filtres a {
   text-decoration: none;
+  color: #d300e6;
+  text-shadow: var(--text-shadow);
 }
 
-.filtre button {
+.filtre {
   background-color: var(--primary-card-color);
   height: 13rem;
   width: 15rem;
@@ -62,7 +64,7 @@
   text-shadow: var(--text-shadow);
 }
 
-.filtre-choix-2 button {
+.filtre-choix-2 {
   background-color: var(--primary-card-color);
   height: 3rem;
   width: 20rem;

@@ -1,4 +1,4 @@
-import SearchCard from "./search-card";
+import SearchCard from "./SearchCard";
 import "./Search.css";
 
 function Search() {
