@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 import "./PopularCocktailCarousel.css";
+import { Link } from "react-router-dom";
+
+interface Cocktail {
+  strDrinkThumb: string;
+  strDrink: string;
+  strInstructions: string;
+  idDrink: number;
+}
 
 interface Cocktail {
   idDrink: string;
@@ -20,7 +28,7 @@ const PopularCocktailCarousel = () => {
           "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail",
         );
         const data = await response.json();
-        const topCocktails = data.drinks.slice(0, 10);
+        const topCocktails: Cocktail[] = data.drinks.slice(0, 10);
 
         const detailedCocktails = await Promise.all(
           topCocktails.map(async (drink: { idDrink: string }) => {
@@ -49,6 +57,7 @@ const PopularCocktailCarousel = () => {
             <div key={cocktail.idDrink} className="carousel-item">
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
               <h3>{cocktail.strDrink}</h3>
+              <Link to={`/cocktail/${cocktail.idDrink}`}>Choisir</Link>
             </div>
           ))}
         </div>

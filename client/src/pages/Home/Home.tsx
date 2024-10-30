@@ -1,7 +1,7 @@
 import "../../App.css";
 import CocktailCard from "../../components/CocktailCard/CocktailCard";
 import PopularCocktailCarousel from "../../components/PopularCocktailCarousel/PopularCocktailCarousel";
-import RandomCocktail from "../../components/RandomCocktail";
+import RandomCocktail from "../../components/RandomCocktail/RandomCocktail";
 
 function Home() {
   return (
