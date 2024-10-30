@@ -1,5 +1,5 @@
 .searchbar {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,41 +16,65 @@
 }
 
 .all {
-  height: 640px;
+  height: 625px;
+}
+
+.h3 {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .filtres {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 660px;
-  justify-content: space-evenly;
+  height: 500px;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.filtre-1 button {
+.filtres-alcool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 530px;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.filtres a {
+  text-decoration: none;
+  color: #d300e6;
+  text-shadow: var(--text-shadow);
+}
+
+.filtre {
   background-color: var(--primary-card-color);
   height: 13rem;
   width: 15rem;
   border-radius: 20px;
-  border: solid 0.5px #d300e6;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #d300e6;
   font-size: 2rem;
   font-family: var(--font-family);
+  text-shadow: var(--text-shadow);
 }
 
-.filtre-2 button {
+.filtre-choix-2 {
   background-color: var(--primary-card-color);
-  height: 13rem;
-  width: 15rem;
+  height: 3rem;
+  width: 20rem;
   border-radius: 20px;
-  border: solid 0.5px #d300e6;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #d300e6;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: var(--font-family);
+  text-shadow: var(--text-shadow);
 }

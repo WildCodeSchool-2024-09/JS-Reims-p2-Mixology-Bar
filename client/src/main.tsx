@@ -3,6 +3,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home/Home";
+import Alcool from "./pages/Search/Alcool";
+import NonAlcool from "./pages/Search/NonAlcool";
 import Search from "./pages/Search/Search";
 
 /* ************************************************************************* */
@@ -39,10 +41,18 @@ const router = createBrowserRouter([
         element: <Search />,
       },
       {
+        path: "/search/alcool",
+        element: <Alcool />,
+      },
+      {
+        path: "/search/non-alcool",
+        element: <NonAlcool />,
+      },
+      {
         path: "*",
         element: (
           <div>
-            <h1>oups....... erreuuuuuueueuueue </h1>
+            <h1>oups....... erreur</h1>
           </div>
         ),
       },
