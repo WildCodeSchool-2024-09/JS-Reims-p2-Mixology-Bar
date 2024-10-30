@@ -3,10 +3,12 @@ import "./PopularCocktailCarousel.css";
 import { Link } from "react-router-dom";
 
 interface Cocktail {
-  strDrinkThumb: string;
-  strDrink: string;
-  strInstructions: string;
   idDrink: number;
+  strDrink: string;
+  strDrinkThumb: string;
+  strAlcoholic?: string;
+  strInstructions?: string;
+  strImageSource?: string;
 }
 
 const PopularCocktailCarousel = () => {
@@ -22,7 +24,7 @@ const PopularCocktailCarousel = () => {
         const topCocktails: Cocktail[] = data.drinks.slice(0, 10);
 
         const detailedCocktails = await Promise.all(
-          topCocktails.map(async (drink) => {
+          topCocktails.map(async (drink: { idDrink: number }) => {
             const res = await fetch(
               `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drink.idDrink}`,
             );
