@@ -33,7 +33,21 @@
   margin-top: 1rem;
 }
 
-.filtre-1 button {
+.filtres-alcool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 530px;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.filtres a {
+  text-decoration: none;
+}
+
+.filtre button {
   background-color: var(--primary-card-color);
   height: 13rem;
   width: 15rem;
@@ -48,17 +62,17 @@
   text-shadow: var(--text-shadow);
 }
 
-.filtre-2 button {
+.filtre-choix-2 button {
   background-color: var(--primary-card-color);
-  height: 13rem;
-  width: 15rem;
+  height: 3rem;
+  width: 20rem;
   border-radius: 20px;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #d300e6;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: var(--font-family);
   text-shadow: var(--text-shadow);
 }
