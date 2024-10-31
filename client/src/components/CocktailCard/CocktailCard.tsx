@@ -22,7 +22,7 @@ const CocktailCard = ({ cocktailId }: CocktailCardProps) => {
           `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`,
         );
         const data = await response.json();
-        setCocktailDetails(data.drinks[0]);
+        setCocktailDetails(data?.drinks[0]);
       } catch (error) {
         console.error(
           "Erreur lors de la récupération des détails du cocktail :",
@@ -53,7 +53,6 @@ const CocktailCard = ({ cocktailId }: CocktailCardProps) => {
         <div className="cocktail-content">
           <div className="cocktail-info">
             <h2>{cocktailDetails.strDrink}</h2>
-            <p>{cocktailDetails.strInstructions}</p>
           </div>
           <button
             type="button"

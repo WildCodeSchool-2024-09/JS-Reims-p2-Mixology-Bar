@@ -22,11 +22,12 @@
 }
 
 body {
-  background-color: var(--tertiary-color);
-  font-family: "Lato", sans-serif;
+  background: var(--background-color);
+  font-family: var(--font-family);
   font-size: 16px;
   line-height: 1.7;
   margin: 0;
-  height: 100vh;
-  color: rgb(156, 131, 99);
+  min-height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
 }
