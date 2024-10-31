@@ -5,11 +5,9 @@
   justify-content: space-between;
   margin-left: 10%;
   margin-right: 10%;
- 
-
 }
 
-  .cktl-name {
+.cktl-name {
   color: var(--primary-color);
   font-family: var(--font-family);
   text-shadow: var(--text-shadow);
@@ -17,7 +15,7 @@
   justify-content: center;
   text-align: right;
   flex-direction: column;
-align-items: center;
+  align-items: center;
 }
 
 h2 {
@@ -58,6 +56,4 @@ h2 {
 }
 .ingr ul {
   list-style: none;
-  
-
 }

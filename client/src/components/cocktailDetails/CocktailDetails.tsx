@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./CocktailDetails.css";
-import share from "../../assets/images/share.png";
 import fav from "../../assets/images/fav-icon.png";
+import share from "../../assets/images/share.png";
 
 interface CocktailDetails {
   strDrink: string;
@@ -49,7 +49,7 @@ const CocktailDetails = () => {
         />
         <div className="btn-container">
           <button type="button" className="btn-shortcut">
-            <img src={fav} alt="fav" className="icon-shortcut"/>
+            <img src={fav} alt="fav" className="icon-shortcut" />
           </button>
           <button type="button" className="btn-shortcut">
             <img src={share} alt="share" className="icon-shortcut" />
@@ -59,19 +59,17 @@ const CocktailDetails = () => {
 
       <h3>Ingrédients</h3>
       <div className="ingr">
-      <ul>
-        {Object.keys(cocktail)
-          .filter((key) => key.startsWith("strIngredient") && cocktail[key])
-          .map((key, index) => (
-            <li key={key}>
-              {cocktail[key]} {cocktail[`strMeasure${index + 1}`] || ""}
-            </li>
-          ))}
-      </ul> 
-
+        <ul>
+          {Object.keys(cocktail)
+            .filter((key) => key.startsWith("strIngredient") && cocktail[key])
+            .map((key, index) => (
+              <li key={key}>
+                {cocktail[key]} {cocktail[`strMeasure${index + 1}`] || ""}
+              </li>
+            ))}
+        </ul>
       </div>
 
-      
       <h3>Description</h3>
       <p>{cocktail.strInstructions}</p>
     </div>

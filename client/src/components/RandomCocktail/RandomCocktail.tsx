@@ -42,7 +42,8 @@ const RandomCocktail = () => {
     <div className="random-container">
       <div className="randomCard">
         <h3 className="cktname">{cocktail.strDrink}</h3>
-        <img className="imgCkt"
+        <img
+          className="imgCkt"
           src={cocktail.strDrinkThumb}
           alt={cocktail.strDrink}
         />
