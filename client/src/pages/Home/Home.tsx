@@ -28,7 +28,7 @@ function Home() {
   const [cocktails, setCocktails] = useState<Array<CocktailAPIResponse>>([]);
   useEffect(() => {
     fetchCocktails().then((response) => {
-      setCocktails(response.drinks.slice(0, 20));
+      setCocktails(response.drinks.slice(0, 10));
     });
   }, []);
 
@@ -37,10 +37,19 @@ function Home() {
   ));
   return (
     <>
-      <div className="cocktail-list">
-        <div className="cocktail-item">{cocktailsList}</div>
+      <div className="cocktail-article-container">
+        <div className="cocktail-list">{cocktailsList}</div>
+      </div>
+      <div className="carousel-title">
+        <h2>Tendances</h2>
       </div>
       <PopularCocktailCarousel />
+      <div className="separation-bar">
+        <hr />
+      </div>
+      <div className="random-title">
+        <h2>En panne d'inspiration ?</h2>
+      </div>
       <RandomCocktail />
     </>
   );

@@ -5,6 +5,7 @@
 
 header {
   height: 8vh;
+  width: 100vw;
   background-color: var(--header-color);
   display: flex;
   justify-content: center;
