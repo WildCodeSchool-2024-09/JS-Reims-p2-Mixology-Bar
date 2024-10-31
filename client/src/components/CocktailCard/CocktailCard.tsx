@@ -53,7 +53,6 @@ const CocktailCard = ({ cocktailId }: CocktailCardProps) => {
         <div className="cocktail-content">
           <div className="cocktail-info">
             <h2>{cocktailDetails.strDrink}</h2>
-            {/* <p>{cocktailDetails.strInstructions}</p> */}
           </div>
           <button
             type="button"
