@@ -28,7 +28,7 @@
   background-color: #ea00ff86;
 }
 .btnrandom:hover {
-  background-color: #250224;
+  background-color: rgb(198, 96, 198);
 }
 
 .random-container {
@@ -45,6 +45,7 @@ h3 {
   text-shadow: var(--text-shadow);
 }
 .imgCkt {
+  position: relative;
   display: flex;
   height: 180px;
   width: 120px;
@@ -52,9 +53,16 @@ h3 {
   border-radius: 15px;
   margin-top: 0.4rem;
   gap: 1rem;
+  animation-play-state: running;
 }
 .cktname {
-  color: aliceblue;
+  color: rgb(198, 96, 198);
   font-size: medium;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .random-container {
+    display: none;
+  }
 }
