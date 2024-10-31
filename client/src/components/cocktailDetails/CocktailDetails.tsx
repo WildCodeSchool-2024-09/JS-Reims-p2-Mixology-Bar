@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./CocktailDetails.css";
+import fav from "../../assets/images/fav-icon.png";
+import share from "../../assets/images/share.png";
 
 interface CocktailDetails {
   strDrink: string;
@@ -37,24 +39,38 @@ const CocktailDetails = () => {
   }
 
   return (
-    <div>
-      <h1>{cocktail.strDrink}</h1>
-      <img
-        className="cktSize"
-        src={cocktail.strDrinkThumb}
-        alt={cocktail.strDrink}
-      />
-      <h2>Ingrédients</h2>
-      <ul>
-        {Object.keys(cocktail)
-          .filter((key) => key.startsWith("strIngredient") && cocktail[key])
-          .map((key, index) => (
-            <li key={key}>
-              {cocktail[key]} {cocktail[`strMeasure${index + 1}`] || ""}
-            </li>
-          ))}
-      </ul>
-      <h2>Description</h2>
+    <div className="ckt-detail-container">
+      <h2 className="cktl-name"> {cocktail.strDrink}</h2>
+      <div className="header-card-container">
+        <img
+          className="cktl-img"
+          src={cocktail.strDrinkThumb}
+          alt={cocktail.strDrink}
+        />
+        <div className="btn-container">
+          <button type="button" className="btn-shortcut">
+            <img src={fav} alt="fav" className="icon-shortcut" />
+          </button>
+          <button type="button" className="btn-shortcut">
+            <img src={share} alt="share" className="icon-shortcut" />
+          </button>
+        </div>
+      </div>
+
+      <h3>Ingrédients</h3>
+      <div className="ingr">
+        <ul>
+          {Object.keys(cocktail)
+            .filter((key) => key.startsWith("strIngredient") && cocktail[key])
+            .map((key, index) => (
+              <li key={key}>
+                {cocktail[key]} {cocktail[`strMeasure${index + 1}`] || ""}
+              </li>
+            ))}
+        </ul>
+      </div>
+
+      <h3>Description</h3>
       <p>{cocktail.strInstructions}</p>
     </div>
   );

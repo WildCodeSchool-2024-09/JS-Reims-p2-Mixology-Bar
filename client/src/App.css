@@ -1,7 +1,7 @@
 :root {
   --purple: #d300e6;
-  --black: #060005;
-  --dark-purple: #250224;
+  --black: #272225;
+  --dark-purple: #42343e;
 
   --primary-color: var(--purple);
   --secondary-color: var(--dark-purple);
