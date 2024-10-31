@@ -5,7 +5,7 @@
 
 header {
   height: 8vh;
-  background-color: var(--header-color);
+  background-color: var(--tertiary-color);
   display: flex;
   justify-content: center;
   align-items: center;

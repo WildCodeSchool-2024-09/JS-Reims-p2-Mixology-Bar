@@ -1,7 +1,7 @@
 :root {
   --purple: #d300e6;
-  --black: #060005;
-  --dark-purple: #250224;
+  --black: #272225;
+  --dark-purple: #42343e;
 
   --primary-color: var(--purple);
   --secondary-color: var(--dark-purple);
@@ -22,22 +22,11 @@
 }
 
 body {
-  background: var(--background-color);
+  background-color: var(--tertiary-color);
   font-family: "Lato", sans-serif;
   font-size: 16px;
   line-height: 1.7;
   margin: 0;
   height: 100vh;
-}
-
-body {
-  background-color: rgb(48, 46, 46);
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #eee;
-  margin: 0;
+  color: rgb(156, 131, 99);
 }
