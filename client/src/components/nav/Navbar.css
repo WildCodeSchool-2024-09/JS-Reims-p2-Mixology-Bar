@@ -4,7 +4,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  background-color: var(--nav-color);
+  background-color: var(--tertiary-color);
   border-top-style: solid;
   border-top-color: #ea00ff;
   box-shadow: var(--box-shadow-bottom);

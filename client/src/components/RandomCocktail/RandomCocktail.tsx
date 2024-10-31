@@ -41,9 +41,8 @@ const RandomCocktail = () => {
   return (
     <div className="random-container">
       <div className="randomCard">
-        <h2 className="cktname">{cocktail.strDrink}</h2>
-        <img
-          className="imgCkt"
+        <h3 className="cktname">{cocktail.strDrink}</h3>
+        <img className="imgCkt"
           src={cocktail.strDrinkThumb}
           alt={cocktail.strDrink}
         />
