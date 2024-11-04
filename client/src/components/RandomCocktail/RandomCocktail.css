@@ -60,3 +60,9 @@ h3 {
   font-size: medium;
   text-align: center;
 }
+
+@media (min-width: 768px) {
+  .random-container {
+    display: none;
+  }
+}

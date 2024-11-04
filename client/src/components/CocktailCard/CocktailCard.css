@@ -3,18 +3,20 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  width: 230px;
 }
 
 .cocktail-card {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 250px;
+  width: 230px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgb(from var(--primary-color) r g b / 0.2);
   overflow: hidden;
   transition: transform 0.3s ease;
-  min-height: 450px;
+  min-height: 300px;
+  background-color: #ea00ff15;
 }
 
 @media (max-width: 768px) {
@@ -42,6 +44,8 @@
   color: var(--primary-color);
   text-align: center;
   margin: 20px 0;
+  text-shadow: var(--text-shadow);
+  font-size: 1.5rem;
 }
 
 .cocktail-info p {

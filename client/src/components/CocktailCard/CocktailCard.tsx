@@ -7,9 +7,13 @@ interface Cocktail {
   strInstructions: string;
 }
 
-const CocktailCard = ({ cocktailId }: { cocktailId: number }) => {
-  const [cocktail, setCocktail] = useState<Cocktail>();
+interface CocktailCardProps {
+  cocktailId: string;
+}
+
+const CocktailCard = ({ cocktailId }: CocktailCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [cocktailDetails, setCocktailDetails] = useState<Cocktail | null>(null);
 
   useEffect(() => {
     const fetchCocktailDetails = async () => {
@@ -18,7 +22,7 @@ const CocktailCard = ({ cocktailId }: { cocktailId: number }) => {
           `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`,
         );
         const data = await response.json();
-        setCocktail(data.drinks[0]);
+        setCocktailDetails(data?.drinks[0]);
       } catch (error) {
         console.error(
           "Erreur lors de la récupération des détails du cocktail :",
@@ -34,7 +38,7 @@ const CocktailCard = ({ cocktailId }: { cocktailId: number }) => {
     setIsFavorite(!isFavorite);
   };
 
-  if (!cocktail) {
+  if (!cocktailDetails) {
     return <div>Chargement...</div>;
   }
 
@@ -42,14 +46,13 @@ const CocktailCard = ({ cocktailId }: { cocktailId: number }) => {
     <div className="cocktail-card-container">
       <div className="cocktail-card">
         <img
-          src={cocktail.strDrinkThumb}
-          alt={cocktail.strDrink}
+          src={cocktailDetails.strDrinkThumb}
+          alt={cocktailDetails.strDrink}
           className="cocktail-image"
         />
         <div className="cocktail-content">
           <div className="cocktail-info">
-            <h2>{cocktail.strDrink}</h2>
-            <p>{cocktail.strInstructions}</p>
+            <h2>{cocktailDetails.strDrink}</h2>
           </div>
           <button
             type="button"

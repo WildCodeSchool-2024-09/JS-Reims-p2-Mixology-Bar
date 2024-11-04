@@ -1,5 +1,6 @@
 nav {
   height: 8vh;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,4 +14,10 @@ nav {
 
 nav img {
   height: 2rem;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: none;
+  }
 }
