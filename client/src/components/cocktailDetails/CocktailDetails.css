@@ -1,10 +1,16 @@
 .ckt-detail-container {
   display: flex;
   flex-direction: column;
-  /* align-items:start; */
+
   justify-content: space-between;
   margin-left: 10%;
   margin-right: 10%;
+}
+@media screen and (min-width: 768px) {
+  .ckt-detail-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .cktl-name {
@@ -22,8 +28,6 @@ h2 {
   color: var(--primary-color);
   font-family: var(--font-family);
   text-shadow: var(--text-shadow);
-  /* text-align: center;
-  margin-left: 2%; */
 }
 
 .header-card-container {
@@ -35,7 +39,7 @@ h2 {
 
 .cktl-img {
   width: 10rem;
-  /* padding-left: 4rem; */
+
   border-radius: 3rem;
 }
 
