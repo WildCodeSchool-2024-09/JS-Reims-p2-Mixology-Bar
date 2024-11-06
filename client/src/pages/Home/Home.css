@@ -4,8 +4,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 90vw;
+  width: 100vw;
+
   gap: 50px;
+
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .home-caroussel-container {
+    background-color: var(--dark-purple);
+    height: 150%;
+  }
 }
 
 .cocktail-article-container {
@@ -21,26 +31,88 @@
   .cocktail-article-container {
     display: none;
   }
-}
 
-.separation-bar {
+  .carousel-title,
+  .random-title {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+    margin-bottom: 10px;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .carousel-title,
+  .random-title p {
+    width: 90vw;
+    font-size: 1rem;
+  }
+
+  /* home caroussel */
+
+  .home-caroussel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .home-caroussel-container h2 {
+    font-size: 2rem;
+  }
+
+  .home-caroussel-container p {
+    text-shadow: none;
+    color: rgba(255, 251, 207, 0.727);
+    text-shadow: 0px 0px 5px rgba(255, 248, 193, 0.282);
+  }
+
+  .home-caroussel {
+    display: flex;
+    flex-direction: column;
+    height: 664px;
+    gap: 6px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    border-radius: 15px;
+  }
+}
+.article-caroussel {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin: 20px;
-  box-shadow: var(--text-shadow);
+  justify-content: center;
+  min-height: 664px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
-hr {
-  border-color: #d300e68f;
-  width: 80vw;
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.carousel-title,
-.random-title {
-  font-family: var(--font-family);
-  color: var(--primary-color);
-  text-shadow: var(--text-shadow);
-  text-align: center;
-  margin-bottom: 10px;
+@media screen and (min-width: 1000px) {
+  .scroll {
+    display: none;
+  }
+
+  .tendance {
+    display: none;
+  }
+  .article-caroussel p {
+    display: none;
+  }
+
+  .article-caroussel p {
+    display: none;
+  }
+  .article-carousel-2 {
+    display: none;
+  }
 }

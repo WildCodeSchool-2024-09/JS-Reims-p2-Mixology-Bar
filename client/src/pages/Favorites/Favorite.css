@@ -1,0 +1,9 @@
+.fav {
+  height: 664px;
+}
+
+.fav h1 {
+  color: aliceblue;
+  text-align: center;
+  text-decoration: line-through;
+}

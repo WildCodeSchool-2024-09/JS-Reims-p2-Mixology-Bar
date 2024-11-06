@@ -1,9 +1,11 @@
-import "./Favories.css";
+import "./Favorite.css";
 
 function Fav() {
   return (
     <>
-      <h1>favorite</h1>
+      <div className="fav">
+        <h1>favorite</h1>
+      </div>
     </>
   );
 }
