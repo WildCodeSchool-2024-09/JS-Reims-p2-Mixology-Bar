@@ -1,6 +1,22 @@
 import "./Compte.css";
+import { type ChangeEvent, useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 function Compte() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const { login, isAuth } = useAuth();
+
+  function handlechangeName(event: ChangeEvent<HTMLInputElement>): void {
+    const value = event.target.value;
+    setUsername(value);
+  }
+  function handlechangePassword(event: ChangeEvent<HTMLInputElement>): void {
+    const value = event.target.value;
+    setPassword(value);
+  }
+
   return (
     <>
       <div className="img">
@@ -11,6 +27,7 @@ function Compte() {
             <div className="inputs-compte">
               <p>nom d'utilisateur</p>
               <input
+                onChange={handlechangeName}
                 type="text"
                 id="nom d'utilisateur"
                 name="nom d'utilisateur"
@@ -19,15 +36,22 @@ function Compte() {
               />
               <p>mot de passe</p>
               <input
-                type="text"
+                onChange={handlechangePassword}
+                type="password"
                 id="mot de passe"
                 name="mot de passe"
                 placeholder="......"
                 className="imput-compte"
               />
-              <button type="button" className="button-compte">
-                connexion
-              </button>
+              <Link to={isAuth ? "/home" : "/"}>
+                <button
+                  onClick={() => login(username, password)}
+                  type="button"
+                  className="button-compte"
+                >
+                  connexion
+                </button>
+              </Link>
             </div>
             <hr />
             <h1>Inscription</h1>
