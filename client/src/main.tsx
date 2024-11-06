@@ -2,6 +2,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Compte from "./pages/Compte/Compte";
+import Fav from "./pages/Favorites/Favorite";
 import Home from "./pages/Home/Home";
 import Alcool from "./pages/Search/Alcool";
 import NonAlcool from "./pages/Search/NonAlcool";
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
       {
         path: "/search/non-alcool",
         element: <NonAlcool />,
+      },
+      {
+        path: "/favorite",
+        element: <Fav />,
+      },
+      {
+        path: "/compte",
+        element: <Compte />,
       },
       {
         path: "*",

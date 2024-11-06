@@ -47,6 +47,11 @@
   text-decoration: none;
   color: #d300e6;
   text-shadow: var(--text-shadow);
+  height: 13rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filtre {

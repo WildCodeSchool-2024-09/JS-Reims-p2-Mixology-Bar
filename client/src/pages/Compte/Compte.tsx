@@ -3,7 +3,9 @@ import "./Compte.css";
 function Compte() {
   return (
     <>
-      <h1>avatar</h1>
+      <div className="compte">
+        <h1>Connexion </h1>
+      </div>
     </>
   );
 }

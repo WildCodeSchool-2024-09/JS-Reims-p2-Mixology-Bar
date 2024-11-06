@@ -4,10 +4,12 @@
 
 @media (max-width: 768px) {
   .carousel {
-    height: 30vh;
+    width: 100vw;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
   }
 
   .scroll-carousel {
@@ -16,7 +18,7 @@
     justify-content: center;
     align-items: center;
     width: 85%;
-    height: 24vh;
+    height: 40vh;
     /* perspective: 1000px;  */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -34,9 +36,9 @@
 
   .carousel-item {
     flex: 0 0 auto;
-    width: 55%;
-    height: 20vh;
-    background-color: #1b1b1e;
+    width: 65%;
+    height: 30vh;
+    background-color: #2d192ba1;
     color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -70,4 +72,29 @@
     font-size: 1.1rem;
     margin: 20px 0;
   }
+}
+
+.container-button-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.carousel-button a {
+  text-decoration: none;
+  color: #d0d0d0;
+}
+.carousel-button {
+  background-color: #ea00ff72;
+  width: 50%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-item h3 {
+  font-size: 0.7rem;
+  margin: 0;
 }

@@ -4,7 +4,9 @@ import "./Search.css";
 function Search() {
   return (
     <>
-      <SearchCard />
+      <div className="search">
+        <SearchCard />
+      </div>
     </>
   );
 }
