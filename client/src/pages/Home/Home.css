@@ -51,8 +51,6 @@
     font-size: 1rem;
   }
 
-  /* home caroussel */
-
   .home-caroussel-container {
     display: flex;
     flex-direction: column;
