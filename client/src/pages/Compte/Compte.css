@@ -1,14 +1,22 @@
 .compte {
   height: 664px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 1.5rem;
 }
 
-.img {
-  display: flex;
-  flex-direction: row;
+@media screen and (max-width: 700px) {
+  .img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fond {
+    background-size: 0%;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -19,6 +27,13 @@
 
   .img {
     height: 100vh;
+  }
+
+  .img {
+    background-image: url("https://s1.1zoom.me/b3760/685/Cocktail_Black_background_Two_Stemware_560594_3840x2160.jpg");
+    background-size: 95%;
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
@@ -48,7 +63,7 @@
   color: var(--primary-color);
   text-shadow: var(--text-shadow);
   margin-top: 1rem;
-  width: 70%;
+  width: 70vw;
   font-size: small;
 }
 
@@ -67,4 +82,10 @@
   border-radius: 20px;
   color: #d0d0d0;
   padding: 0.25rem .5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .img-cocktail {
+    display: none;
+  }
 }
