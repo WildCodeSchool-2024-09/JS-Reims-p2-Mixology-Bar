@@ -1,9 +1,9 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
-import home from "../../assets/images/Home.png";
-import search from "../../assets/images/search.png";
 import fav from "../../assets/images/Heart-desk.png";
+import home from "../../assets/images/Home.png";
 import compte from "../../assets/images/avatar.png";
+import search from "../../assets/images/search.png";
 
 function Header() {
   return (

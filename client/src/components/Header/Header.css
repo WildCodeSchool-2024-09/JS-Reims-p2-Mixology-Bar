@@ -19,6 +19,34 @@ header h1 {
   color: var(--primary-color);
   font-family: var(--font-family);
   text-shadow: var(--text-shadow);
+  animation: neom 3s infinite;
+}
+
+@keyframes neom {
+  0%,
+  18%,
+  21%,
+  32%,
+  35%,
+  39%,
+  42%,
+  89%,
+  91%,
+  100% {
+    text-shadow: var(--text-shadow);
+  }
+
+  34%,
+  41%,
+  90% {
+    text-shadow: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header img {
+    display: none;
+  }
 }
 
 header img {
@@ -31,3 +59,14 @@ header img:hover {
   transition: 1s;
   opacity: 100%;
 }
+
+/* .blink {
+  animation: blink 1s infinite;
+}
+
+
+@keyframes blink { 
+  0% { opacity:0; }
+  50% { opacity:1; } 
+  100% { opacity:0; }
+} */
