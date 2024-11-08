@@ -5,6 +5,18 @@
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .searchbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    height: 90vh;
+  }
+}
+
 .imput {
   width: 70vw;
   background-color: var(--primary-card-color);
@@ -31,6 +43,32 @@
   height: 500px;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .filtres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 400px;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+
+  .filtre {
+    background-color: var(--primary-card-color);
+    height: 23rem;
+    width: 25rem;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d300e6;
+    font-size: 2rem;
+    font-family: var(--font-family);
+    text-shadow: var(--text-shadow);
+  }
 }
 
 .filtres-alcool {

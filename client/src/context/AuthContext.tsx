@@ -20,11 +20,8 @@ export function AuthProvider({ children }: MyContextProps) {
       if (password === "Paul") {
         setIsAuth(true);
       }
-    }
-    if (username !== "Paul") {
-      if (password !== "Paul") {
-        alert("mauvais mot de passe ou mauvais nom d'utilisateur");
-      }
+    } else {
+      alert("mauvais mot de passe ou mauvais nom d'utilisateur");
     }
   }
 
