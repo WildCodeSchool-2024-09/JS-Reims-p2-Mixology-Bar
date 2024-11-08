@@ -1,9 +1,14 @@
-.fav {
-  height: 664px;
+.fav-titre h1 {
+  color: var(--primary-color);
+  text-shadow: var(--text-shadow);
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .fav-titre h1 {
+    color: var(--primary-color);
+  }
 }
 
-.fav h1 {
-  color: aliceblue;
-  text-align: center;
-  text-decoration: line-through;
+.display-favorite {
+  display: flex;
 }
