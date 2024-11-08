@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./CocktailDetails.css";
 import fav from "../../assets/images/fav-icon.png";
-import share from "../../assets/images/share.png";
-import instagram from "../../assets/images/insta.png";
 import facebook from "../../assets/images/fb-icon.png";
+import instagram from "../../assets/images/insta.png";
+import share from "../../assets/images/share.png";
 import twitter from "../../assets/images/twitter.png";
 
 export interface CocktailDetails {
@@ -27,13 +27,9 @@ const CocktailDetails = () => {
   };
 
   const addToFavorites = (idDrink?: string) => {
-    console.log(idDrink)
-
-    const array=[]
-    array.push(idDrink) 
-    console.log(array)
-
-    localStorage.setItem("Cocktail",JSON.stringify(array));
+    const array = [];
+    array.push(idDrink);
+    localStorage.setItem("Cocktail", JSON.stringify(array));
   };
 
   useEffect(() => {
@@ -87,10 +83,7 @@ const CocktailDetails = () => {
                     );
                   })}
               </div>
-              <button
-                type="button"
-                onClick={() => addToFavorites(id)}
-              >
+              <button type="button" onClick={() => addToFavorites(id)}>
                 <img src={fav} alt="fav" className="fav-icone" />
               </button>
             </div>

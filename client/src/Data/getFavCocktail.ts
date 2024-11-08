@@ -1,8 +1,17 @@
-export async function getFavCocktail(ids: string[]) {
-  const url = (id: string) => 
-    `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
-  
-console.log(ids)
+interface Drink {
+  idDrink: string;
+  strDrink: string;
+  strDrinkThumb: string;
+  strInstructions: string;
+}
+
+interface ApiResponse {
+  drinks: Drink[];
+}
+
+export async function getFavCocktail(ids: string[]): Promise<ApiResponse[]> {
+  const url = (id: string) => `/api/api/json/v1/1/lookup.php?i=${id}`;
+
   try {
     const fetchPromises = ids.map((id) =>
       fetch(url(id), {
@@ -15,14 +24,19 @@ console.log(ids)
           const errorText = await response.text();
           throw new Error(`Error: ${response.status} - ${errorText}`);
         }
-        return response.json();
+        const data: ApiResponse = await response.json();
+        return data;
       }),
     );
 
     const data = await Promise.all(fetchPromises);
+
     return data;
   } catch (error) {
-    if (error instanceof Error)
-      console.error("An error occurred:", error.message);
+    console.error(
+      "An error occurred:",
+      error instanceof Error ? error.message : error,
+    );
+    return [];
   }
 }
