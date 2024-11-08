@@ -6,7 +6,7 @@ import Home from "./pages/Home/Home";
 import Alcool from "./pages/Search/Alcool";
 import NonAlcool from "./pages/Search/NonAlcool";
 import Search from "./pages/Search/Search";
-
+import Favorite from "./pages/Favorites/Favorite";
 /* ************************************************************************* */
 
 // Import the main app component
@@ -48,6 +48,11 @@ const router = createBrowserRouter([
         path: "/search/non-alcool",
         element: <NonAlcool />,
       },
+      {
+        path:"/favorites", 
+        element: <Favorite />,
+      },
+
       {
         path: "*",
         element: (

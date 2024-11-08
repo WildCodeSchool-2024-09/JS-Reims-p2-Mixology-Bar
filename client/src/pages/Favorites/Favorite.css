@@ -1,0 +1,12 @@
+.fav-titre h1 {
+    color: var(--primary-color);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+}
+@media screen and (min-width:768px) {
+    .fav-titre h1 {
+        color: var(--primary-color);
+        
+    }
+    
+}
