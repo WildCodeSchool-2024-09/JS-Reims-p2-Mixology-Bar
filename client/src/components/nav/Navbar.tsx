@@ -20,7 +20,7 @@ function Nav() {
         <Link to={isAuth ? "/favorite" : "/"}>
           <img src={favorite} alt="" />
         </Link>
-        <Link to="compte">
+        <Link to={isAuth ? "/favorite" : "/compte"}>
           <img src={avatar} alt="" />
         </Link>
       </nav>
