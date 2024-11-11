@@ -50,10 +50,8 @@ const PopularCocktailCarousel = () => {
             <div key={cocktail.idDrink} className="carousel-item">
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
               <h3>{cocktail.strDrink}</h3>
-              <div className="container-button-carousel">
-                <div className="carousel-button">
-                  <Link to={`/cocktail/${cocktail.idDrink}`}>Choisir</Link>
-                </div>
+              <div className="carousel-button">
+                <Link to={`/cocktail/${cocktail.idDrink}`}>Choisir</Link>
               </div>
             </div>
           ))}
