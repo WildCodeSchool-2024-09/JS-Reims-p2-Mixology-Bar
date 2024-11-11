@@ -1,0 +1,14 @@
+.ingredient-container {
+  display: flex;
+  gap: 20px;
+}
+
+.ingredient-input, .ingredient-button {
+  width: 18rem;
+  background-color: var(--primary-card-color);
+  border: solid 1px var(--primary-color);
+  border-radius: 20px;
+  padding: 0.5rem;
+  color: aliceblue;
+  margin-bottom: 1rem;
+}

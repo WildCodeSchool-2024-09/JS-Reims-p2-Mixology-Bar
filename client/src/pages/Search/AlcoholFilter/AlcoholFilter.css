@@ -1,0 +1,15 @@
+.alcohol-button-container {
+display: flex;
+
+gap: 20px;
+}
+
+.alcohol-button {
+  width: 18rem;
+  background-color: var(--primary-card-color);
+  border: solid 1px var(--primary-color);
+  border-radius: 20px;
+  padding: 0.5rem;
+  color: aliceblue;
+  margin-bottom: 10rem;
+}

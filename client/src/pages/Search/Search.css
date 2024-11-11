@@ -1,123 +1,41 @@
-.searchbar {
-  margin-top: 2rem;
+.search-page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
 }
 
-@media screen and (min-width: 768px) {
-  .searchbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .search {
-    height: 90vh;
-  }
-}
-
-.imput {
-  width: 70vw;
-  background-color: var(--primary-card-color);
-  border: solid 1px #d300e6;
-  border-radius: 20px;
-  height: 1.75rem;
-  padding: 0 1rem;
-  color: aliceblue;
-}
-
-.all {
-  height: 625px;
-}
-
-.h3 {
+.search-title {
+  color: var(--primary-color);
   text-align: center;
-  margin-top: 2rem;
+  text-shadow: var(--text-shadow);
+  margin-bottom: 1rem;
 }
 
-.filtres {
+.search-filters {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 500px;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-@media screen and (min-width: 768px) {
-  .filtres {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 400px;
-    justify-content: space-evenly;
-    margin-top: 1rem;
-  }
-
-  .filtre {
-    background-color: var(--primary-card-color);
-    height: 23rem;
-    width: 25rem;
-    border-radius: 20px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #d300e6;
-    font-size: 2rem;
-    font-family: var(--font-family);
-    text-shadow: var(--text-shadow);
-  }
-}
-
-.filtres-alcool {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 530px;
-  justify-content: space-between;
   gap: 1rem;
-  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px;
 }
 
-.filtres a {
-  text-decoration: none;
-  color: #d300e6;
-  text-shadow: var(--text-shadow);
-  height: 13rem;
-  width: 15rem;
+.results-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 800px;
 }
 
-.filtre {
-  background-color: var(--primary-card-color);
-  height: 13rem;
-  width: 15rem;
-  border-radius: 20px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #d300e6;
-  font-size: 2rem;
-  font-family: var(--font-family);
-  text-shadow: var(--text-shadow);
-}
+@media (max-width: 768px) {
+  .search-filters {
+    flex-direction: column;
+  }
 
-.filtre-choix-2 {
-  background-color: var(--primary-card-color);
-  height: 3rem;
-  width: 20rem;
-  border-radius: 20px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #d300e6;
-  font-size: 1.5rem;
-  font-family: var(--font-family);
-  text-shadow: var(--text-shadow);
+  .search-page {
+    background-size: contain;
+  }
 }
