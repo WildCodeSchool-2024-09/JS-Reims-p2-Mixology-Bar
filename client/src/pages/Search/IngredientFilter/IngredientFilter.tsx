@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSearchContext } from "../../../context/SearchContext";
-import "./IngredientFilter.css"
+import "./IngredientFilter.css";
 
 export const IngredientFilter = () => {
   const [ingredient, setIngredient] = useState("");
@@ -12,13 +12,18 @@ export const IngredientFilter = () => {
 
   return (
     <div className="ingredient-container">
-      <input className="ingredient-input"
+      <input
+        className="ingredient-input"
         type="text"
         value={ingredient}
         onChange={(e) => setIngredient(e.target.value)}
         placeholder="Filter by ingredient"
       />
-      <button type="button" className="ingredient-button" onClick={handleFilter}>
+      <button
+        type="button"
+        className="ingredient-button"
+        onClick={handleFilter}
+      >
         Filter
       </button>
     </div>

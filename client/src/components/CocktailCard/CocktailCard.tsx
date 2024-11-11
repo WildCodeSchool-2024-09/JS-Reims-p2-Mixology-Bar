@@ -16,7 +16,9 @@ interface CocktailCardProps {
 
 const CocktailCard = ({ cocktailId, initialData }: CocktailCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const [cocktailDetails, setCocktailDetails] = useState<Cocktail | null>(initialData || null);
+  const [cocktailDetails, setCocktailDetails] = useState<Cocktail | null>(
+    initialData || null,
+  );
 
   useEffect(() => {
     if (!cocktailDetails && cocktailId) {

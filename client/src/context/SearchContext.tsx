@@ -45,9 +45,9 @@ export const SearchProvider = ({ children }: { children: ReactNode }) => {
           `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`,
         );
         const data = await response.json();
-  
+
         const drinks: Cocktail[] = data.drinks;
-  
+
         const filteredCocktails = drinks.filter((drink) => {
           const matchesAlcoholic =
             isAlcoholic === null
@@ -55,20 +55,21 @@ export const SearchProvider = ({ children }: { children: ReactNode }) => {
               : isAlcoholic
                 ? drink.strAlcoholic === "Alcoholic"
                 : drink.strAlcoholic === "Non_Alcoholic";
-  
+
           const matchesIngredient =
             ingredient === "" ||
             Array.from({ length: 15 }).some((_, i) => {
-              const ingredientField = drink[`strIngredient${i + 1}` as keyof Cocktail];
+              const ingredientField =
+                drink[`strIngredient${i + 1}` as keyof Cocktail];
               return (
                 typeof ingredientField === "string" &&
                 ingredientField.toLowerCase().includes(ingredient.toLowerCase())
               );
             });
-  
+
           return matchesAlcoholic && matchesIngredient;
         });
-  
+
         setCocktails(filteredCocktails);
       } catch (error) {
         console.error("Error fetching cocktails:", error);
@@ -76,8 +77,6 @@ export const SearchProvider = ({ children }: { children: ReactNode }) => {
     },
     [isAlcoholic, ingredient],
   );
-  
-  
 
   const filterAlcoholic = (isAlcoholic: boolean | null) => {
     setIsAlcoholic(isAlcoholic);

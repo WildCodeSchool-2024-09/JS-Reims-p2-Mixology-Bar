@@ -1,5 +1,5 @@
-import { useSearchContext } from "../../context/SearchContext";
 import CocktailCard from "../../components/CocktailCard/CocktailCard";
+import { useSearchContext } from "../../context/SearchContext";
 
 export const Results = () => {
   const { cocktails } = useSearchContext();

@@ -1,9 +1,10 @@
 .searchbar-container {
-display: flex;
-gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
-.name-input, .searchbar-button {
+.name-input,
+.searchbar-button {
   width: 18rem;
   background-color: var(--primary-card-color);
   border: solid 1px var(--primary-color);

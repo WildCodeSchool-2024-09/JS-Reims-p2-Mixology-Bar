@@ -6,13 +6,25 @@ export const AlcoholFilter = () => {
 
   return (
     <div className="alcohol-button-container">
-      <button type="button" className="alcohol-button" onClick={() => filterAlcoholic(true)}>
+      <button
+        type="button"
+        className="alcohol-button"
+        onClick={() => filterAlcoholic(true)}
+      >
         Alcoholic
       </button>
-      <button type="button" className="alcohol-button" onClick={() => filterAlcoholic(false)}>
+      <button
+        type="button"
+        className="alcohol-button"
+        onClick={() => filterAlcoholic(false)}
+      >
         Non-Alcoholic
       </button>
-      <button type="button" className="alcohol-button" onClick={() => filterAlcoholic(null)}>
+      <button
+        type="button"
+        className="alcohol-button"
+        onClick={() => filterAlcoholic(null)}
+      >
         All
       </button>
     </div>
