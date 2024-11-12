@@ -46,8 +46,8 @@ function Home() {
             <div className="carousel-title">
               <h2 className="tendance">Tendances</h2>
               <p>
-                Voici une selection des cocktails les plus consultés sur notre
-                site
+                Voici une selection des cocktails{" "}
+                <p>les plus consultés sur notre site</p>
               </p>
             </div>
             <PopularCocktailCarousel />
@@ -57,7 +57,8 @@ function Home() {
               <div className="random-title">
                 <h2>En panne d'inspiration ?</h2>
                 <p>
-                  Clique sur le bouton et un cocktail va apparaitre au hazarre !
+                  Clique sur le bouton{" "}
+                  <p>et un cocktail apparaîtra au hasard !</p>
                 </p>
               </div>
               <RandomCocktail />

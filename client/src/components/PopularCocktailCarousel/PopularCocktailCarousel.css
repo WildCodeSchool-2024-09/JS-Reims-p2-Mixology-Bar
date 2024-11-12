@@ -19,7 +19,6 @@
     align-items: center;
     width: 85%;
     height: 40vh;
-    /* perspective: 1000px;  */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding: 10px 0;
@@ -35,6 +34,10 @@
   }
 
   .carousel-item {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 0 0 auto;
     width: 65%;
     height: 30vh;
@@ -42,7 +45,7 @@
     color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    padding: 5px;
+    padding: 20px 10px;
     text-align: center;
     scroll-snap-align: center;
     scroll-snap-stop: always;
@@ -74,19 +77,12 @@
   }
 }
 
-.container-button-carousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
-}
-
 .carousel-button a {
   text-decoration: none;
   color: #d0d0d0;
 }
 .carousel-button {
-  background-color: #ea00ff72;
+  background-color: var(--background-submit-button);
   width: 50%;
   border-radius: 20px;
   display: flex;
