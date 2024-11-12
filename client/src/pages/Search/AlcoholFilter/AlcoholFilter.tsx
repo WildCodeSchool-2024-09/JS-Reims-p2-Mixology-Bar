@@ -42,14 +42,14 @@ export const AlcoholFilter = () => {
           className="alcohol-button"
           onClick={() => fetchCocktailsByType("Alcoholic")}
         >
-          Alcoolisé
+          <p>Alcoholic</p>
         </button>
         <button
           type="button"
           className="alcohol-button"
           onClick={() => fetchCocktailsByType("Non_Alcoholic")}
         >
-          Non Alcoolisé
+          <p>Non Alcoholic</p>
         </button>
       </div>
 

@@ -2,7 +2,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { SearchProvider } from "./context/SearchContext";
 import Compte from "./pages/Compte/Compte";
 import Favorite from "./pages/Favorites/Favorite";
 import Home from "./pages/Home/Home";
@@ -43,11 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/search",
-        element: (
-          <SearchProvider>
-            <Search />
-          </SearchProvider>
-        ),
+        element: <Search />,
       },
       {
         path: "/favorites",

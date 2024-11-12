@@ -1,7 +1,5 @@
 import { AlcoholFilter } from "./AlcoholFilter/AlcoholFilter";
-import { IngredientFilter } from "./IngredientFilter/IngredientFilter";
 import { NameSearch } from "./NameSearch/NameSearch";
-import { Results } from "./Results";
 import "./Search.css";
 
 const Search = () => {
@@ -11,9 +9,7 @@ const Search = () => {
       <div className="search-filters">
         <NameSearch />
         <AlcoholFilter />
-        <IngredientFilter />
       </div>
-      <Results />
     </div>
   );
 };

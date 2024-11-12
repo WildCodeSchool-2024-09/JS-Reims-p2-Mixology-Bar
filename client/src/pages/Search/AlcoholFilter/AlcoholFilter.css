@@ -5,13 +5,21 @@
 }
 
 .alcohol-button {
-  width: 18rem;
+  width: 22rem;
+  height: 3rem;
   background-color: var(--primary-card-color);
   border: solid 1px var(--primary-color);
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 0.5rem;
   color: aliceblue;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
+}
+
+.alcohol-button p {
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  text-shadow: var(--text-shadow);
+  font-size: 20px;
 }
 
 .cocktail-results {
