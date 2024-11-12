@@ -1,8 +1,7 @@
 export async function getFavCocktail(ids: string[]) {
-  const url = (id: string) => 
+  const url = (id: string) =>
     `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
-  
-console.log(ids)
+
   try {
     const fetchPromises = ids.map((id) =>
       fetch(url(id), {

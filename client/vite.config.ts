@@ -8,8 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target:
-          "https://www.thecocktaildb.com/api/json/v1/1/lookup.php",
+        target: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php",
         changeOrigin: true,
       },
     },

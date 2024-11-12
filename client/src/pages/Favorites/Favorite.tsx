@@ -7,10 +7,8 @@ function Favorites() {
   const [favorites, setFavorites] = useState<CocktailDetails[]>();
 
   useEffect(() => {
- 
-
     const fetchFavCocktail = async () => {
-      const arrayId = JSON.parse(localStorage.getItem("Cocktail")||'{}');
+      const arrayId = JSON.parse(localStorage.getItem("Cocktail") || "{}");
 
       const data = await getFavCocktail(arrayId);
       setFavorites(data);
