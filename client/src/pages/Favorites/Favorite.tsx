@@ -28,7 +28,7 @@ function Fav() {
 
     fetchFavCocktail();
   }, []);
-  console.log(favorites);
+
   return (
     <div className="fav-titre">
       <h1>Mes Cocktails Favoris</h1>
