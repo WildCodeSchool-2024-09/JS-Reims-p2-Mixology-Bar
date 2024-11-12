@@ -29,8 +29,8 @@ function Compte() {
               <input
                 onChange={handlechangeName}
                 type="text"
-                id="nom d'utilisateur"
-                name="nom d'utilisateur"
+                id="nom-utilisateur"
+                name="nom-utilisateur"
                 placeholder="nom"
                 className="imput-compte"
               />
@@ -38,8 +38,8 @@ function Compte() {
               <input
                 onChange={handlechangePassword}
                 type="password"
-                id="mot de passe"
-                name="mot de passe"
+                id="mot-de-passe"
+                name="mot-de-passe"
                 placeholder="......"
                 className="imput-compte"
               />
@@ -60,24 +60,24 @@ function Compte() {
               <p>nom d'utilisateur</p>
               <input
                 type="text"
-                id="nom d'utilisateur"
-                name="nom d'utilisateur"
+                id="nom-utilisateur-inscr"
+                name="nom-utilisateur-inscr"
                 placeholder="nom"
                 className="imput-compte"
               />
               <p>mot de passe</p>
               <input
                 type="text"
-                id="mot de passe"
-                name="mot de passe"
+                id="mot-de-passe-inscr"
+                name="mot-de-passe-inscr"
                 placeholder="......"
                 className="imput-compte"
               />
               <p>confirmation mot de passe</p>
               <input
                 type="text"
-                id="mot de passe"
-                name="mot de passe"
+                id="confirm-mot-de-passe-inscr"
+                name="confirm-mot-de-passe-inscr"
                 placeholder="......"
                 className="imput-compte"
               />

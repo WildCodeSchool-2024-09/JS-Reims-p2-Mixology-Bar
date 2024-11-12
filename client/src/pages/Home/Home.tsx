@@ -51,28 +51,9 @@ function Home() {
               </p>
             </div>
             <PopularCocktailCarousel />
-            <div className="scroll">
-              <h3>
-                <br />
-                <br />
-                scroll vers le bas
-              </h3>
-              <br />
-              <h3>⬇</h3>
-            </div>
           </div>
           <div className="article-carousel-2">
             <div className="article-caroussel">
-              <div className="scroll">
-                <h3>⬆</h3>
-                <br />
-                <h3>
-                  scroll vers le haut
-                  <br />
-                  <br />
-                  <br />
-                </h3>
-              </div>
               <div className="random-title">
                 <h2>En panne d'inspiration ?</h2>
                 <p>

@@ -4,10 +4,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-
+  width: 85rem;
   gap: 50px;
-
   padding-bottom: 3rem;
 }
 

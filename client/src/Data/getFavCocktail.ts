@@ -10,7 +10,7 @@ interface ApiResponse {
 }
 
 export async function getFavCocktail(ids: string[]): Promise<ApiResponse[]> {
-  const url = (id: string) => `/api/api/json/v1/1/lookup.php?i=${id}`;
+  const url = (id: string) => `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
 
   try {
     const fetchPromises = ids.map((id) =>
