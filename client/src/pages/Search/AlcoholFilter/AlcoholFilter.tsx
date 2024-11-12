@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AlcoholFilter.css";
+import CocktailCard from "../../../components/CocktailCard/CocktailCard";
 
 type Cocktail = {
   idDrink: string;
@@ -19,7 +20,7 @@ export const AlcoholFilter = () => {
       );
       const data = await response.json();
 
-      if (data.drinks) {
+      if (Array.isArray(data.drinks)) {
         setCocktails(data.drinks);
       } else {
         setCocktails([]);
@@ -56,10 +57,15 @@ export const AlcoholFilter = () => {
 
       <div className="cocktail-results">
         {cocktails.map((cocktail) => (
-          <div key={cocktail.idDrink} className="cocktail-card">
-            <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-            <p>{cocktail.strDrink}</p>
-          </div>
+          <CocktailCard
+            key={cocktail.idDrink}
+            initialData={{
+              idDrink: cocktail.idDrink,
+              strDrink: cocktail.strDrink,
+              strDrinkThumb: cocktail.strDrinkThumb,
+              strInstructions: "",
+            }}
+          />
         ))}
       </div>
     </div>

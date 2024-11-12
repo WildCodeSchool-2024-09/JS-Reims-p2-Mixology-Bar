@@ -1,6 +1,6 @@
 .ingredient-container {
   display: flex;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .ingredient-input,

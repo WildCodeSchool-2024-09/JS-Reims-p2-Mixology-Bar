@@ -1,6 +1,7 @@
 .alcohol-button-container {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .alcohol-button {
@@ -11,4 +12,12 @@
   padding: 0.5rem;
   color: aliceblue;
   margin-bottom: 10rem;
+}
+
+.cocktail-results {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+  justify-items: center;
+  margin-top: 1rem;
 }
