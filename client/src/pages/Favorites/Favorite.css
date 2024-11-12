@@ -8,3 +8,7 @@
     color: var(--primary-color);
   }
 }
+
+.display-favorite {
+  display: flex;
+}

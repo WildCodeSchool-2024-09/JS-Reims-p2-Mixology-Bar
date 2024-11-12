@@ -37,20 +37,53 @@ function Home() {
   ));
   return (
     <>
-      <div className="cocktail-article-container">
-        <div className="cocktail-list">{cocktailsList}</div>
+      <div className="home-caroussel-container">
+        <div className="home-caroussel">
+          <div className="article-caroussel">
+            <div className="cocktail-article-container">
+              <div className="cocktail-list">{cocktailsList}</div>
+            </div>
+            <div className="carousel-title">
+              <h2 className="tendance">Tendances</h2>
+              <p>
+                Voici une selection des cocktails les plus consultés sur notre
+                site
+              </p>
+            </div>
+            <PopularCocktailCarousel />
+            <div className="scroll">
+              <h3>
+                <br />
+                <br />
+                scroll vers le bas
+              </h3>
+              <br />
+              <h3>⬇</h3>
+            </div>
+          </div>
+          <div className="article-carousel-2">
+            <div className="article-caroussel">
+              <div className="scroll">
+                <h3>⬆</h3>
+                <br />
+                <h3>
+                  scroll vers le haut
+                  <br />
+                  <br />
+                  <br />
+                </h3>
+              </div>
+              <div className="random-title">
+                <h2>En panne d'inspiration ?</h2>
+                <p>
+                  Clique sur le bouton et un cocktail va apparaitre au hazarre !
+                </p>
+              </div>
+              <RandomCocktail />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="carousel-title">
-        <h2>Tendances</h2>
-      </div>
-      <PopularCocktailCarousel />
-      <div className="separation-bar">
-        <hr />
-      </div>
-      <div className="random-title">
-        <h2>En panne d'inspiration ?</h2>
-      </div>
-      <RandomCocktail />
     </>
   );
 }

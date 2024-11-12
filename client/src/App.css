@@ -31,3 +31,10 @@ body {
   width: 100vw;
   background-repeat: no-repeat;
 }
+
+.all {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

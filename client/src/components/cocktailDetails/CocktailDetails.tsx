@@ -28,7 +28,6 @@ const CocktailDetails = () => {
   const addToFavorites = (idDrink?: string) => {
     const array = [];
     array.push(idDrink);
-
     localStorage.setItem("Cocktail", JSON.stringify(array));
   };
 

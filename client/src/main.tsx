@@ -2,12 +2,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Compte from "./pages/Compte/Compte";
 import Favorite from "./pages/Favorites/Favorite";
 import Home from "./pages/Home/Home";
 import Alcool from "./pages/Search/Alcool";
 import NonAlcool from "./pages/Search/NonAlcool";
 import Search from "./pages/Search/Search";
-
 /* ************************************************************************* */
 
 // Import the main app component
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <Compte />,
+      },
+      {
+        path: "/home",
         element: <Home />,
       },
       {
@@ -53,7 +57,10 @@ const router = createBrowserRouter([
         path: "/favorites",
         element: <Favorite />,
       },
-
+      {
+        path: "/compte",
+        element: <Compte />,
+      },
       {
         path: "*",
         element: (

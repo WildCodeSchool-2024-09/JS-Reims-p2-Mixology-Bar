@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "./CocktailCard.css";
+import { Link } from "react-router-dom";
 
 interface Cocktail {
+  idDrink: string;
   strDrinkThumb: string;
   strDrink: string;
   strInstructions: string;
@@ -53,6 +55,9 @@ const CocktailCard = ({ cocktailId }: CocktailCardProps) => {
         <div className="cocktail-content">
           <div className="cocktail-info">
             <h2>{cocktailDetails.strDrink}</h2>
+          </div>
+          <div className="carousel-button">
+            <Link to={`/cocktail/${cocktailDetails.idDrink}`}>Choisir</Link>
           </div>
           <button
             type="button"
