@@ -13,6 +13,7 @@
   );
   --header-color: var(--tertiary-color);
   --nav-color: var(--secondary-color);
+  --background-submit-button: #ea00ff72;
   --primary-card-color: rgba(234, 0, 255, 0.1);
   --secondary-card-color: rgba(234, 0, 255, 0.05);
   --box-shadow-bottom: 0px 5px 8px rgba(234, 0, 255, 0.25);
