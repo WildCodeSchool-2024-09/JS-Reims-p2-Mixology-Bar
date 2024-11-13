@@ -51,7 +51,7 @@ const PopularCocktailCarousel = () => {
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
               <h3>{cocktail.strDrink}</h3>
               <div className="carousel-button">
-                <Link to={`/cocktail/${cocktail.idDrink}`}>Choisir</Link>
+                <Link to={`/cocktail/${cocktail.idDrink}`}>Choose</Link>
               </div>
             </div>
           ))}
