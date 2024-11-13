@@ -90,4 +90,8 @@
   .img-cocktail {
     display: none;
   }
+
+  label {
+    color: #ffffffe9;
+  }
 }

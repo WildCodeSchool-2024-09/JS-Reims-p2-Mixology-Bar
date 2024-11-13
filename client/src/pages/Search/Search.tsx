@@ -117,19 +117,22 @@ export const Search = () => {
           <p>Non Alcoholic</p>
         </button>
       </div>
-
-      <div className="cocktail-results">
-        {filteredCocktails.map((cocktail) => (
-          <CocktailCard
-            key={cocktail.idDrink}
-            initialData={{
-              idDrink: cocktail.idDrink,
-              strDrink: cocktail.strDrink,
-              strDrinkThumb: cocktail.strDrinkThumb,
-              strInstructions: "",
-            }}
-          />
-        ))}
+      <div className="scroll-container">
+        <div className="scroll-in-scroll">
+          <div className="cocktail-results">
+            {filteredCocktails.map((cocktail) => (
+              <CocktailCard
+                key={cocktail.idDrink}
+                initialData={{
+                  idDrink: cocktail.idDrink,
+                  strDrink: cocktail.strDrink,
+                  strDrinkThumb: cocktail.strDrinkThumb,
+                  strInstructions: "",
+                }}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
