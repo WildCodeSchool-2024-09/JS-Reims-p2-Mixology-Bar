@@ -20,7 +20,8 @@
 }
 
 .cocktail-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10%) translateY(5px) translateZ(0);
+  transition: transform 0.3s ease-out;
 }
 
 .cocktail-content {
@@ -34,7 +35,7 @@
 
 .cocktail-image {
   width: 100%;
-  max-height: 150px;
+  max-height: 175px;
   object-fit: cover;
   border-radius: 10px;
 }

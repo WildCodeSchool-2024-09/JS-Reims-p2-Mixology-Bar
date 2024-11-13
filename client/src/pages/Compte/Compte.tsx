@@ -57,24 +57,24 @@ function Compte() {
       <div className="desktop-compte">
         <div className="compte">
           <form onSubmit={handleLoginSubmit} className="inputs-compte">
-            <h1>Connexion</h1>
-            <label htmlFor="username">Nom d'utilisateur</label>
+            <h1>Connection</h1>
+            <label htmlFor="username">User name</label>
             <input
               onChange={handleChangeUsername}
               type="text"
               id="username"
               name="username"
-              placeholder="Nom/pseudonyme"
+              placeholder="Username"
               className="imput-compte"
               required
             />
-            <label htmlFor="password">Mot de passe</label>
+            <label htmlFor="password">Password</label>
             <input
               onChange={handleChangePassword}
               type="password"
               id="password"
               name="password"
-              placeholder="Mot de passe"
+              placeholder="Password"
               className="imput-compte"
               required
             />
@@ -84,45 +84,45 @@ function Compte() {
                 type="submit"
                 className="button-compte"
               >
-                Connexion
+                Connection
               </button>
             </Link>
           </form>
           <hr />
           <form onSubmit={handleRegisterSubmit} className="inputs-compte">
-            <h1>Inscription</h1>
-            <label htmlFor="registerUsername">Nom d'utilisateur</label>
+            <h1>Registration</h1>
+            <label htmlFor="registerUsername">User name</label>
             <input
               onChange={handleRegisterUsernameChange}
               type="text"
               id="registerUsername"
               name="registerUsername"
-              placeholder="Nom/pseudonyme"
+              placeholder="User name"
               className="imput-compte"
               required
             />
-            <label htmlFor="registerPassword">Mot de passe</label>
+            <label htmlFor="registerPassword">Password</label>
             <input
               onChange={handleRegisterPasswordChange}
               type="password"
               id="registerPassword"
               name="registerPassword"
-              placeholder="Mot de passe"
+              placeholder="Password"
               className="imput-compte"
               required
             />
-            <label htmlFor="confirmPassword">Confirmation mot de passe</label>
+            <label htmlFor="confirmPassword">Confirm password</label>
             <input
               onChange={handleConfirmPasswordChange}
               type="password"
               id="confirmPassword"
               name="confirmPassword"
-              placeholder="Confirmez le mot de passe"
+              placeholder="Confirm password"
               className="imput-compte"
               required
             />
             <button type="submit" className="button-compte">
-              Inscription
+              Registration
             </button>
           </form>
         </div>
