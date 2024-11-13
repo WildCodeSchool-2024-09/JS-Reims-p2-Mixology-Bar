@@ -18,7 +18,7 @@ function Header() {
           <img src={search} alt="" />
         </Link>
         <h1>Mixology Bar</h1>
-        <Link to={isAuth ? "/favorite" : "/"}>
+        <Link to={isAuth ? "/favorites" : "/"}>
           <img src={fav} alt="" />
         </Link>
         <Link to={isAuth ? "/compte" : "/"}>

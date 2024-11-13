@@ -19,12 +19,6 @@
   background-color: #ea00ff15;
 }
 
-@media (max-width: 768px) {
-  .cocktail-card {
-    display: none;
-  }
-}
-
 .cocktail-card:hover {
   transform: translateY(-10%) translateY(5px) translateZ(0);
   transition: transform 0.3s ease-out;
