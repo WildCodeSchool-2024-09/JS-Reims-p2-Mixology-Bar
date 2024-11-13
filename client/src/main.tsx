@@ -5,9 +5,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Compte from "./pages/Compte/Compte";
 import Favorite from "./pages/Favorites/Favorite";
 import Home from "./pages/Home/Home";
-import Alcool from "./pages/Search/Alcool";
-import NonAlcool from "./pages/Search/NonAlcool";
 import Search from "./pages/Search/Search";
+
 /* ************************************************************************* */
 
 // Import the main app component
@@ -44,14 +43,6 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <Search />,
-      },
-      {
-        path: "/search/alcool",
-        element: <Alcool />,
-      },
-      {
-        path: "/search/non-alcool",
-        element: <NonAlcool />,
       },
       {
         path: "/favorites",
