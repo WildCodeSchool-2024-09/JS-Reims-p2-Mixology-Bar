@@ -5,7 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Compte from "./pages/Compte/Compte";
 import Favorite from "./pages/Favorites/Favorite";
 import Home from "./pages/Home/Home";
-import Search from "./pages/Search/Search";
+import { Search } from "./pages/Search/Search";
 
 /* ************************************************************************* */
 
