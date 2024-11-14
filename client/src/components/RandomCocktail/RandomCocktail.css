@@ -1,18 +1,11 @@
 .btnrandom {
-  font-size: 30px;
+  font-size: 22px;
   cursor: pointer;
   text-align: center;
   background-color: var(--background-submit-button);
   border: none;
   border-radius: 15px;
-  padding: 0.5rem 2rem;
-}
-
-.randomCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5rem;
+  padding: 0.4rem 1.5rem;
 }
 
 .random-container {
@@ -22,30 +15,6 @@
   justify-content: center;
   gap: 1rem;
   height: 40vh;
-}
-
-h3 {
-  color: var(--primary-color);
-  font-family: var(--font-family);
-  text-shadow: var(--text-shadow);
-}
-
-.imgCkt {
-  position: relative;
-  display: flex;
-  height: 30vh;
-  width: 50vw;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-top: 0.4rem;
-  gap: 1rem;
-
-  animation-play-state: running;
-}
-.cktname {
-  color: rgb(198, 96, 198);
-  font-size: medium;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
