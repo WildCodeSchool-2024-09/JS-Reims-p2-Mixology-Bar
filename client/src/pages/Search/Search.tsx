@@ -53,12 +53,14 @@ export const Search = () => {
   const fetchAllCocktails = useCallback(async () => {
     setError(null);
     try {
-      const alcoholicResponse = await fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic",
-      );
-      const nonAlcoholicResponse = await fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic",
-      );
+      const [alcoholicResponse, nonAlcoholicResponse] = await Promise.all([
+        fetch(
+          "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic",
+        ),
+        fetch(
+          "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic",
+        ),
+      ]);
 
       const alcoholicData = await alcoholicResponse.json();
       const nonAlcoholicData = await nonAlcoholicResponse.json();

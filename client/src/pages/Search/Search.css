@@ -62,11 +62,16 @@
   width: 22rem;
   height: 4rem;
   background-color: var(--primary-card-color);
-  border: solid 1px var(--primary-color);
+  border: solid 1px rgba(238, 0, 255, 0.253);
   border-radius: 15px;
   padding: 0.5rem;
   color: aliceblue;
   margin-bottom: 2rem;
+  transition: .2s;
+}
+
+.alcohol-button:hover {
+  transform: scale(1.05);
 }
 
 .alcohol-button p {
