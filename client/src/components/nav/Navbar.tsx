@@ -17,10 +17,10 @@ function Nav() {
         <Link to={isAuth ? "/search" : "/"}>
           <img src={search} alt="" />
         </Link>
-        <Link to={isAuth ? "/favorite" : "/"}>
+        <Link to={isAuth ? "/favorites" : "/"}>
           <img src={favorite} alt="" />
         </Link>
-        <Link to={isAuth ? "/favorite" : "/compte"}>
+        <Link to={isAuth ? "/compte" : "/"}>
           <img src={avatar} alt="" />
         </Link>
       </nav>

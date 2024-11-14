@@ -3,11 +3,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Compte from "./pages/Compte/Compte";
-import Favorite from "./pages/Favorites/Favorite";
+import Fav from "./pages/Favorites/Favorite";
 import Home from "./pages/Home/Home";
-import Alcool from "./pages/Search/Alcool";
-import NonAlcool from "./pages/Search/NonAlcool";
-import Search from "./pages/Search/Search";
+import { Search } from "./pages/Search/Search";
+
 /* ************************************************************************* */
 
 // Import the main app component
@@ -46,16 +45,8 @@ const router = createBrowserRouter([
         element: <Search />,
       },
       {
-        path: "/search/alcool",
-        element: <Alcool />,
-      },
-      {
-        path: "/search/non-alcool",
-        element: <NonAlcool />,
-      },
-      {
         path: "/favorites",
-        element: <Favorite />,
+        element: <Fav />,
       },
       {
         path: "/compte",

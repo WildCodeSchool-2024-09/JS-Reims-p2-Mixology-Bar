@@ -16,12 +16,12 @@ export function AuthProvider({ children }: MyContextProps) {
   const [isAuth, setIsAuth] = useState(false);
 
   function login(username: string, password: string) {
-    if (username === "Paul") {
-      if (password === "Paul") {
-        setIsAuth(true);
-      }
+    if (username === "Paul" && password === "Paul") {
+      setIsAuth(true);
     } else {
-      alert("mauvais mot de passe ou mauvais nom d'utilisateur");
+      alert(
+        "Le nom d'utilisateur/utilisatrice ou le mot de passe est incorrect. Veuillez réessayer.",
+      );
     }
   }
 

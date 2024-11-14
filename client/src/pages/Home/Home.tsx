@@ -44,39 +44,20 @@ function Home() {
               <div className="cocktail-list">{cocktailsList}</div>
             </div>
             <div className="carousel-title">
-              <h2 className="tendance">Tendances</h2>
+              <h2 className="tendance">Trends</h2>
               <p>
-                Voici une selection des cocktails les plus consultés sur notre
-                site
+                Here is a selection of cocktails <p>most viewed on our site</p>
               </p>
             </div>
             <PopularCocktailCarousel />
-            <div className="scroll">
-              <h3>
-                <br />
-                <br />
-                scroll vers le bas
-              </h3>
-              <br />
-              <h3>⬇</h3>
-            </div>
           </div>
           <div className="article-carousel-2">
             <div className="article-caroussel">
-              <div className="scroll">
-                <h3>⬆</h3>
-                <br />
-                <h3>
-                  scroll vers le haut
-                  <br />
-                  <br />
-                  <br />
-                </h3>
-              </div>
               <div className="random-title">
-                <h2>En panne d'inspiration ?</h2>
+                <h2>Out of inspiration?</h2>
                 <p>
-                  Clique sur le bouton et un cocktail va apparaitre au hazarre !
+                  Click on the button{" "}
+                  <p>and a cocktail will appear randomly!</p>
                 </p>
               </div>
               <RandomCocktail />

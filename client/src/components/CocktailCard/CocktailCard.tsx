@@ -10,31 +10,36 @@ interface Cocktail {
 }
 
 interface CocktailCardProps {
-  cocktailId: string;
+  cocktailId?: string;
+  initialData?: Cocktail;
 }
 
-const CocktailCard = ({ cocktailId }: CocktailCardProps) => {
+const CocktailCard = ({ cocktailId, initialData }: CocktailCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const [cocktailDetails, setCocktailDetails] = useState<Cocktail | null>(null);
+  const [cocktailDetails, setCocktailDetails] = useState<Cocktail | null>(
+    initialData || null,
+  );
 
   useEffect(() => {
-    const fetchCocktailDetails = async () => {
-      try {
-        const response = await fetch(
-          `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`,
-        );
-        const data = await response.json();
-        setCocktailDetails(data?.drinks[0]);
-      } catch (error) {
-        console.error(
-          "Erreur lors de la récupération des détails du cocktail :",
-          error,
-        );
-      }
-    };
+    if (!cocktailDetails && cocktailId) {
+      const fetchCocktailDetails = async () => {
+        try {
+          const response = await fetch(
+            `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`,
+          );
+          const data = await response.json();
+          setCocktailDetails(data?.drinks[0]);
+        } catch (error) {
+          console.error(
+            "Erreur lors de la récupération des détails du cocktail :",
+            error,
+          );
+        }
+      };
 
-    fetchCocktailDetails();
-  }, [cocktailId]);
+      fetchCocktailDetails();
+    }
+  }, [cocktailId, cocktailDetails]);
 
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite);
@@ -57,7 +62,7 @@ const CocktailCard = ({ cocktailId }: CocktailCardProps) => {
             <h2>{cocktailDetails.strDrink}</h2>
           </div>
           <div className="carousel-button">
-            <Link to={`/cocktail/${cocktailDetails.idDrink}`}>Choisir</Link>
+            <Link to={`/cocktail/${cocktailDetails.idDrink}`}>Choose</Link>
           </div>
           <button
             type="button"

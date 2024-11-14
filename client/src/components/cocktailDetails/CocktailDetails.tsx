@@ -51,7 +51,7 @@ const CocktailDetails = () => {
   }, [id]);
 
   if (!cocktail) {
-    return <div>Chargement...</div>;
+    return <div>Loading...</div>;
   }
 
   return (
@@ -89,7 +89,7 @@ const CocktailDetails = () => {
           </div>
         </div>
         <div className="ckt-ingr">
-          <h3>Ingrédients</h3>
+          <h3>Ingredients</h3>
           <ul>
             {Object.keys(cocktail)
               .filter((key) => key.startsWith("strIngredient") && cocktail[key])

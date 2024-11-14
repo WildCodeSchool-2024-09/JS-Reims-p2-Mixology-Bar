@@ -13,7 +13,7 @@ interface ApiResponse {
   drinks: Drink[];
 }
 
-function Favorites() {
+function Fav() {
   const [favorites, setFavorites] = useState<Drink[]>([]);
 
   useEffect(() => {
@@ -52,4 +52,4 @@ function Favorites() {
   );
 }
 
-export default Favorites;
+export default Fav;
