@@ -62,7 +62,7 @@ const CocktailCard = ({ cocktailId, initialData }: CocktailCardProps) => {
             <h2>{cocktailDetails.strDrink}</h2>
           </div>
           <div className="carousel-button">
-            <Link to={`/cocktail/${cocktailDetails.idDrink}`}>Choose</Link>
+            <Link to={`/cocktail/${cocktailDetails.idDrink}`}>Pick</Link>
           </div>
           <button
             type="button"
