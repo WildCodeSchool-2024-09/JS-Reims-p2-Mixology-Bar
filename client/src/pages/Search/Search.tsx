@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./Search.css";
 import CocktailCard from "../../components/CocktailCard/CocktailCard";
 
@@ -36,7 +36,7 @@ export const Search = () => {
 
       if (data.drinks) {
         setCocktails(data.drinks);
-        applyFilter(data.drinks, filter);
+        setFilteredCocktails(data.drinks);
       } else {
         setCocktails([]);
         setFilteredCocktails([]);
@@ -50,19 +50,55 @@ export const Search = () => {
     }
   };
 
-  const applyFilter = (
-    cocktails: Cocktail[],
-    filter: "All" | "Alcoholic" | "Non_Alcoholic",
-  ) => {
-    if (filter === "All") {
-      setFilteredCocktails(cocktails);
-    } else {
-      const filtered = cocktails.filter((cocktail) =>
-        filter === "Alcoholic"
-          ? cocktail.strAlcoholic === "Alcoholic"
-          : cocktail.strAlcoholic === "Non_Alcoholic",
+  const fetchAllCocktails = useCallback(async () => {
+    setError(null);
+    try {
+      const [alcoholicResponse, nonAlcoholicResponse] = await Promise.all([
+        fetch(
+          "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic",
+        ),
+        fetch(
+          "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic",
+        ),
+      ]);
+
+      const alcoholicData = await alcoholicResponse.json();
+      const nonAlcoholicData = await nonAlcoholicResponse.json();
+
+      const allCocktails = [
+        ...(alcoholicData.drinks || []),
+        ...(nonAlcoholicData.drinks || []),
+      ];
+
+      setCocktails(allCocktails);
+      setFilteredCocktails(allCocktails);
+    } catch (error) {
+      setError(
+        "Une erreur s'est produite lors de la récupération des cocktails.",
       );
-      setFilteredCocktails(filtered);
+      console.error(error);
+    }
+  }, []);
+
+  const fetchCocktailsByType = async (type: "Alcoholic" | "Non_Alcoholic") => {
+    setError(null);
+    try {
+      const response = await fetch(
+        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${type}`,
+      );
+      const data = await response.json();
+
+      if (data.drinks) {
+        setFilteredCocktails(data.drinks);
+      } else {
+        setFilteredCocktails([]);
+        setError("Aucun cocktail trouvé pour ce filtre.");
+      }
+    } catch (error) {
+      setError(
+        "Une erreur s'est produite lors de la récupération des cocktails.",
+      );
+      console.error(error);
     }
   };
 
@@ -70,7 +106,12 @@ export const Search = () => {
     newFilter: "All" | "Alcoholic" | "Non_Alcoholic",
   ) => {
     setFilter(newFilter);
-    applyFilter(cocktails, newFilter);
+
+    if (newFilter === "All") {
+      setFilteredCocktails(cocktails);
+    } else {
+      fetchCocktailsByType(newFilter);
+    }
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -78,6 +119,10 @@ export const Search = () => {
       handleSearch();
     }
   };
+
+  useEffect(() => {
+    fetchAllCocktails();
+  }, [fetchAllCocktails]);
 
   return (
     <div className="search-container">
@@ -97,39 +142,43 @@ export const Search = () => {
       <div className="alcohol-filter-container">
         <button
           type="button"
-          className="alcohol-button"
+          className={`alcohol-button ${filter === "All" ? "active" : ""}`}
           onClick={() => handleFilterChange("All")}
         >
           <p>All</p>
         </button>
         <button
           type="button"
-          className="alcohol-button"
+          className={`alcohol-button ${filter === "Alcoholic" ? "active" : ""}`}
           onClick={() => handleFilterChange("Alcoholic")}
         >
           <p>Alcoholic</p>
         </button>
         <button
           type="button"
-          className="alcohol-button"
+          className={`alcohol-button ${filter === "Non_Alcoholic" ? "active" : ""}`}
           onClick={() => handleFilterChange("Non_Alcoholic")}
         >
           <p>Non Alcoholic</p>
         </button>
       </div>
 
-      <div className="cocktail-results">
-        {filteredCocktails.map((cocktail) => (
-          <CocktailCard
-            key={cocktail.idDrink}
-            initialData={{
-              idDrink: cocktail.idDrink,
-              strDrink: cocktail.strDrink,
-              strDrinkThumb: cocktail.strDrinkThumb,
-              strInstructions: "",
-            }}
-          />
-        ))}
+      <div className="scroll-container">
+        <div className="scroll-in-scroll">
+          <div className="cocktail-results">
+            {filteredCocktails.map((cocktail) => (
+              <CocktailCard
+                key={cocktail.idDrink}
+                initialData={{
+                  idDrink: cocktail.idDrink,
+                  strDrink: cocktail.strDrink,
+                  strDrinkThumb: cocktail.strDrinkThumb,
+                  strInstructions: "",
+                }}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
