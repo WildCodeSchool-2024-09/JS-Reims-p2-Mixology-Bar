@@ -16,6 +16,7 @@
   overflow: hidden;
   transition: transform 0.3s ease;
   background-color: #ea00ff15;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.727);
 }
 
 .cocktail-card:hover {

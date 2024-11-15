@@ -58,21 +58,11 @@ header h1 {
 header img {
   height: 35px;
   opacity: 50%;
+  transition: 1s;
 }
 
 header img:hover {
   transform: rotate(360deg);
-  transition: 1s;
+
   opacity: 100%;
 }
-
-/* .blink {
-  animation: blink 1s infinite;
-}
-
-
-@keyframes blink { 
-  0% { opacity:0; }
-  50% { opacity:1; } 
-  100% { opacity:0; }
-} */
