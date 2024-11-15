@@ -3,6 +3,7 @@ import "./Search.css";
 import CocktailCard from "../../components/CocktailCard/CocktailCard";
 
 type Cocktail = {
+  strInstructions: string;
   idDrink: string;
   strDrink: string;
   strDrinkThumb: string;
@@ -173,7 +174,7 @@ export const Search = () => {
                   idDrink: cocktail.idDrink,
                   strDrink: cocktail.strDrink,
                   strDrinkThumb: cocktail.strDrinkThumb,
-                  strInstructions: "",
+                  strInstructions: cocktail.strInstructions || "",
                 }}
               />
             ))}

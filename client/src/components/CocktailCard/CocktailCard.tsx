@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import "./CocktailCard.css";
 import { Link } from "react-router-dom";
-
-interface Cocktail {
-  idDrink: string;
-  strDrinkThumb: string;
-  strDrink: string;
-  strInstructions: string;
-}
+import type { Cocktail } from "../../types/Cocktail";
 
 interface CocktailCardProps {
   cocktailId?: string;
