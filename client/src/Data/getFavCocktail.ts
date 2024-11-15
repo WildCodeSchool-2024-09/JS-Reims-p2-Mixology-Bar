@@ -1,43 +1,25 @@
-interface Drink {
-  idDrink: string;
-  strDrink: string;
-  strDrinkThumb: string;
-  strInstructions: string;
-}
+import type { Drink, ApiResponse } from "../types/Cocktail"
 
-interface ApiResponse {
-  drinks: Drink[];
-}
-
-export async function getFavCocktail(ids: string[]): Promise<ApiResponse[]> {
+export async function getFavCocktail(ids: string[]): Promise<Drink[]> {
   const url = (id: string) =>
     `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
 
   try {
-    const fetchPromises = ids.map((id) =>
-      fetch(url(id), {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }).then(async (response) => {
+    const fetchPromises = ids
+      .filter((id) => id)
+      .map(async (id) => {
+        const response = await fetch(url(id));
         if (!response.ok) {
-          const errorText = await response.text();
-          throw new Error(`Error: ${response.status} - ${errorText}`);
+          throw new Error(`Error: ${response.status}`);
         }
         const data: ApiResponse = await response.json();
-        return data;
-      }),
-    );
+        return data.drinks[0];
+      });
 
     const data = await Promise.all(fetchPromises);
-
-    return data;
+    return data; 
   } catch (error) {
-    console.error(
-      "An error occurred:",
-      error instanceof Error ? error.message : error,
-    );
+    console.error("An error occurred:", error);
     return [];
   }
 }

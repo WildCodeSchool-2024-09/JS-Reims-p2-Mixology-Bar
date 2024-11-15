@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Compte from "./pages/Compte/Compte";
-import Fav from "./pages/Favorites/Favorite";
+import Fav from "./pages/Favorite/Favorite";
 import Home from "./pages/Home/Home";
 import { Search } from "./pages/Search/Search";
 

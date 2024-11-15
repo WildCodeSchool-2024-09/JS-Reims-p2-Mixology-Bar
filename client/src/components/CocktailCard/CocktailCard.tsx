@@ -6,9 +6,14 @@ import type { Cocktail } from "../../types/Cocktail";
 interface CocktailCardProps {
   cocktailId?: string;
   initialData?: Cocktail;
+  onFavoriteToggle?: () => void;
 }
 
-const CocktailCard = ({ cocktailId, initialData }: CocktailCardProps) => {
+const CocktailCard = ({
+  cocktailId,
+  initialData,
+  onFavoriteToggle,
+}: CocktailCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [cocktailDetails, setCocktailDetails] = useState<Cocktail | null>(
     initialData || null,
@@ -33,10 +38,33 @@ const CocktailCard = ({ cocktailId, initialData }: CocktailCardProps) => {
 
       fetchCocktailDetails();
     }
+
+    const favoriteIds = JSON.parse(localStorage.getItem("Cocktail") || "[]");
+    if (cocktailDetails && favoriteIds.includes(cocktailDetails.idDrink)) {
+      setIsFavorite(true);
+    }
   }, [cocktailId, cocktailDetails]);
 
   const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
+    const favoriteIds = JSON.parse(localStorage.getItem("Cocktail") || "[]");
+
+    if (isFavorite) {
+      const updatedFavorites = favoriteIds.filter(
+        (id: string) => id !== cocktailDetails?.idDrink,
+      );
+      localStorage.setItem("Cocktail", JSON.stringify(updatedFavorites));
+      setIsFavorite(false);
+    } else {
+      if (cocktailDetails) {
+        favoriteIds.push(cocktailDetails.idDrink);
+        localStorage.setItem("Cocktail", JSON.stringify(favoriteIds));
+        setIsFavorite(true);
+      }
+    }
+
+    if (onFavoriteToggle) {
+      onFavoriteToggle();
+    }
   };
 
   if (!cocktailDetails) {

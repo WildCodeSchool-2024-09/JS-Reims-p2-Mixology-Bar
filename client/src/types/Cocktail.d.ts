@@ -28,3 +28,14 @@ export interface BasicCocktail {
   strDrink: string;
   strDrinkThumb: string;
 }
+
+export type Drink = {
+  idDrink: string;
+  strDrink: string;
+  strDrinkThumb: string;
+  strInstructions: string;
+};
+
+export type ApiResponse = {
+  drinks: Drink[];
+};
