@@ -1,11 +1,11 @@
 .btnrandom {
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
   background-color: var(--background-submit-button);
   border: none;
   border-radius: 15px;
-  padding: 0.5rem 2rem;
+  padding: 0.25rem 2.5rem;
 }
 
 .randomCard {
