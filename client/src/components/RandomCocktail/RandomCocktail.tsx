@@ -9,6 +9,7 @@ const RandomCocktail = () => {
 
   const fetchRandomCocktail = useCallback(async () => {
     try {
+      setLoading(true);
       const response = await fetch(
         "https://www.thecocktaildb.com/api/json/v1/1/random.php",
       );
@@ -26,7 +27,7 @@ const RandomCocktail = () => {
   }, [fetchRandomCocktail]);
 
   if (loading) {
-    return <p>Reloading in progress</p>;
+    return <p>Fetching a random cocktail... 🔃</p>;
   }
 
   if (!cocktail) {
@@ -35,7 +36,7 @@ const RandomCocktail = () => {
 
   return (
     <div className="random-container">
-      <CocktailCard initialData={cocktail} />
+      <CocktailCard key={cocktail.idDrink} initialData={cocktail} />
       <button className="btnrandom" type="button" onClick={fetchRandomCocktail}>
         🎲
       </button>

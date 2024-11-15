@@ -11,16 +11,16 @@ function Nav() {
   return (
     <>
       <nav>
-        <Link to={isAuth ? "/home" : "/"}>
+        <Link to={isAuth ? "/home" : "/home"}>
           <img src={home} alt="" />
         </Link>
-        <Link to={isAuth ? "/search" : "/"}>
+        <Link to={isAuth ? "/search" : "/search"}>
           <img src={search} alt="" />
         </Link>
-        <Link to={isAuth ? "/favorites" : "/"}>
+        <Link to={isAuth ? "/favorites" : "/favorites"}>
           <img src={favorite} alt="" />
         </Link>
-        <Link to={isAuth ? "/compte" : "/"}>
+        <Link to={isAuth ? "/compte" : "/compte"}>
           <img src={avatar} alt="" />
         </Link>
       </nav>

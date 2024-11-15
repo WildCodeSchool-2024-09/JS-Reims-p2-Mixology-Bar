@@ -1,11 +1,11 @@
 .btnrandom {
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
   background-color: var(--background-submit-button);
   border: none;
   border-radius: 15px;
-  padding: 0.4rem 1.5rem;
+  padding: 0.25rem 2.5rem;
 }
 
 .random-container {
@@ -15,6 +15,7 @@
   justify-content: center;
   gap: 1rem;
   height: 40vh;
+  padding-top: 80px;
 }
 
 @media (min-width: 768px) {

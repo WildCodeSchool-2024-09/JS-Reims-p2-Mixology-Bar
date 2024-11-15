@@ -55,6 +55,10 @@ function Home() {
             <div className="article-caroussel">
               <div className="random-title">
                 <h2>Lacking inspiration?</h2>
+                <p>
+                  Click on the button
+                  <p>and a cocktail will appear randomly!</p>
+                </p>
               </div>
               <RandomCocktail />
             </div>
