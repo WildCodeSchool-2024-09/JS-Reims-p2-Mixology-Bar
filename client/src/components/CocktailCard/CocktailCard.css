@@ -12,7 +12,7 @@
   position: relative;
   width: 230px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgb(from var(--primary-color) r g b / 0.2);
+  box-shadow: 0 5px 10px black;
   overflow: hidden;
   transition: transform 0.3s ease;
   background-color: #ea00ff15;
