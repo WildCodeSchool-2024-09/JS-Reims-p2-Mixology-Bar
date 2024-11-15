@@ -1,4 +1,4 @@
-import type { Drink, ApiResponse } from "../types/Cocktail"
+import type { ApiResponse, Drink } from "../types/Cocktail";
 
 export async function getFavCocktail(ids: string[]): Promise<Drink[]> {
   const url = (id: string) =>
@@ -17,7 +17,7 @@ export async function getFavCocktail(ids: string[]): Promise<Drink[]> {
       });
 
     const data = await Promise.all(fetchPromises);
-    return data; 
+    return data;
   } catch (error) {
     console.error("An error occurred:", error);
     return [];

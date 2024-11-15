@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./Favorite.css";
 import { getFavCocktail } from "../../Data/getFavCocktail";
 import CocktailCard from "../../components/CocktailCard/CocktailCard";
