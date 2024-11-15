@@ -9,17 +9,17 @@ function Header() {
   return (
     <>
       <header>
-        <Link to="/home">
+        <Link to={"/home"}>
           <img src={home} alt="" />
         </Link>
-        <Link to="/search">
+        <Link to={"/search"}>
           <img src={search} alt="" />
         </Link>
         <h1>Mixology Bar</h1>
-        <Link to="/favorites">
+        <Link to={"/favorites"}>
           <img src={fav} alt="" />
         </Link>
-        <Link to="/compte">
+        <Link to={"/compte"}>
           <img src={compte} alt="" />
         </Link>
       </header>

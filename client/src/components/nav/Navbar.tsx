@@ -9,16 +9,16 @@ function Nav() {
   return (
     <>
       <nav>
-        <Link to="/home">
+        <Link to={"/home"}>
           <img src={home} alt="" />
         </Link>
-        <Link to="/search">
+        <Link to={"/search"}>
           <img src={search} alt="" />
         </Link>
-        <Link to="/favorites">
+        <Link to={"/favorites"}>
           <img src={favorite} alt="" />
         </Link>
-        <Link to="/compte">
+        <Link to={"/compte"}>
           <img src={avatar} alt="" />
         </Link>
       </nav>
