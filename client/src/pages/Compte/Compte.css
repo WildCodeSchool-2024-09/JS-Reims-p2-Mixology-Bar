@@ -7,6 +7,21 @@
   margin-top: 1.5rem;
 }
 
+.titre {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.titre h2 {
+  font-size: 3rem;
+  margin-right: 3rem;
+  margin-top: 20rem;
+  animation: neom 3s infinite;
+}
+
 @media screen and (max-width: 768px) {
   .img {
     display: flex;
@@ -16,6 +31,10 @@
 
   .fond {
     background-size: 0%;
+  }
+
+  .titre {
+    display: none;
   }
 }
 

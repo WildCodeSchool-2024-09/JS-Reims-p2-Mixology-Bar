@@ -100,7 +100,7 @@ function Compte() {
               placeholder="User name"
               className="imput-compte"
               required
-            />
+            />{" "}
             <label htmlFor="registerPassword">Password</label>
             <input
               onChange={handleRegisterPasswordChange}
@@ -126,6 +126,9 @@ function Compte() {
             </button>
           </form>
         </div>
+      </div>
+      <div className="titre">
+        <h2>Mixology Bar</h2>
       </div>
     </div>
   );

@@ -4,23 +4,21 @@ import favorite from "../../assets/images/Heart.png";
 import home from "../../assets/images/Home.png";
 import avatar from "../../assets/images/avatar.png";
 import search from "../../assets/images/search.png";
-import { useAuth } from "../../context/AuthContext";
 
 function Nav() {
-  const { isAuth } = useAuth();
   return (
     <>
       <nav>
-        <Link to={isAuth ? "/home" : "/"}>
+        <Link to="/home">
           <img src={home} alt="" />
         </Link>
-        <Link to={isAuth ? "/search" : "/"}>
+        <Link to="/search">
           <img src={search} alt="" />
         </Link>
-        <Link to={isAuth ? "/favorites" : "/"}>
+        <Link to="/favorites">
           <img src={favorite} alt="" />
         </Link>
-        <Link to={isAuth ? "/compte" : "/"}>
+        <Link to="/compte">
           <img src={avatar} alt="" />
         </Link>
       </nav>
