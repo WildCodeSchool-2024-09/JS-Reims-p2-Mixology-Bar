@@ -60,13 +60,18 @@
 
 .alcohol-button {
   width: 22rem;
-  height: 3rem;
+  height: 4rem;
   background-color: var(--primary-card-color);
-  border: solid 1px var(--primary-color);
-  border-radius: 30px;
+  border: solid 1px rgba(238, 0, 255, 0.253);
+  border-radius: 15px;
   padding: 0.5rem;
   color: aliceblue;
   margin-bottom: 2rem;
+  transition: .2s;
+}
+
+.alcohol-button:hover {
+  transform: scale(1.05);
 }
 
 .alcohol-button p {
@@ -83,13 +88,17 @@
   width: 100%;
   max-width: 1000px;
   margin-top: 1rem;
-  place-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
   .search-container {
-    width: 100%;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 91%;
+    height: 100%;
   }
 
   .searchbar-container {
@@ -98,18 +107,37 @@
     margin-top: 0.2rem;
   }
 
+  .scroll-container {
+    height: 50vh;
+    width: 90vw;
+  }
+
+  .scroll-in-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+
   .name-input {
     width: 95%;
   }
   .alcohol-filter-container {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    width: 80%;
   }
 
   .alcohol-button {
     width: 7rem;
     height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .alcohol-button p {
@@ -127,5 +155,10 @@
     max-width: 100%;
     margin-top: 1rem;
     place-items: center;
+  }
+
+  .cocktail-card {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 }

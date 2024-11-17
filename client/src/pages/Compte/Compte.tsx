@@ -57,8 +57,8 @@ function Compte() {
       <div className="desktop-compte">
         <div className="compte">
           <form onSubmit={handleLoginSubmit} className="inputs-compte">
-            <h1>Connection</h1>
-            <label htmlFor="username">User name</label>
+            <h1>Sign In</h1>
+            <label htmlFor="username">Username</label>
             <input
               onChange={handleChangeUsername}
               type="text"
@@ -84,23 +84,23 @@ function Compte() {
                 type="submit"
                 className="button-compte"
               >
-                Connection
+                Sign In
               </button>
             </Link>
           </form>
           <hr />
           <form onSubmit={handleRegisterSubmit} className="inputs-compte">
-            <h1>Registration</h1>
-            <label htmlFor="registerUsername">User name</label>
+            <h1>Sign Up</h1>
+            <label htmlFor="registerUsername">Username</label>
             <input
               onChange={handleRegisterUsernameChange}
               type="text"
               id="registerUsername"
               name="registerUsername"
-              placeholder="User name"
+              placeholder="Username"
               className="imput-compte"
               required
-            />
+            />{" "}
             <label htmlFor="registerPassword">Password</label>
             <input
               onChange={handleRegisterPasswordChange}
@@ -122,10 +122,13 @@ function Compte() {
               required
             />
             <button type="submit" className="button-compte">
-              Registration
+              Sign Up
             </button>
           </form>
         </div>
+      </div>
+      <div className="titre">
+        <h2>Mixology Bar</h2>
       </div>
     </div>
   );

@@ -4,24 +4,22 @@ import fav from "../../assets/images/Heart-desk.png";
 import home from "../../assets/images/Home.png";
 import compte from "../../assets/images/avatar.png";
 import search from "../../assets/images/search.png";
-import { useAuth } from "../../context/AuthContext";
 
 function Header() {
-  const { isAuth } = useAuth();
   return (
     <>
       <header>
-        <Link to={isAuth ? "/home" : "/"}>
+        <Link to={"/home"}>
           <img src={home} alt="" />
         </Link>
-        <Link to={isAuth ? "/search" : "/"}>
+        <Link to={"/search"}>
           <img src={search} alt="" />
         </Link>
         <h1>Mixology Bar</h1>
-        <Link to={isAuth ? "/favorites" : "/"}>
+        <Link to={"/favorites"}>
           <img src={fav} alt="" />
         </Link>
-        <Link to={isAuth ? "/compte" : "/"}>
+        <Link to={"/compte"}>
           <img src={compte} alt="" />
         </Link>
       </header>

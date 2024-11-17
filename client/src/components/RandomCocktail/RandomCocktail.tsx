@@ -1,16 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 import "./RandomCocktail.css";
-interface RandomCocktail {
-  strDrink: string;
-  strDrinkThumb: string;
-}
+import CocktailCard from "../../components/CocktailCard/CocktailCard";
+import type { Cocktail } from "../../types/Cocktail";
 
 const RandomCocktail = () => {
-  const [cocktail, setCocktail] = useState<RandomCocktail>();
+  const [cocktail, setCocktail] = useState<Cocktail | null>(null);
   const [loading, setLoading] = useState(true);
 
   const fetchRandomCocktail = useCallback(async () => {
     try {
+      setLoading(true);
       const response = await fetch(
         "https://www.thecocktaildb.com/api/json/v1/1/random.php",
       );
@@ -18,10 +17,7 @@ const RandomCocktail = () => {
       setCocktail(data.drinks[0]);
       setLoading(false);
     } catch (error) {
-      console.error(
-        "Erreur lors de la récupération des détails du cocktail:",
-        error,
-      );
+      console.error("Error fetching cocktail details:", error);
       setLoading(false);
     }
   }, []);
@@ -31,24 +27,16 @@ const RandomCocktail = () => {
   }, [fetchRandomCocktail]);
 
   if (loading) {
-    return <p>rechargement en cours 🔃</p>;
+    return <p>Fetching a random cocktail... 🔃</p>;
   }
 
   if (!cocktail) {
-    return <p>pas de cocktail trouvé 🗿</p>;
+    return <p>No cocktail found</p>;
   }
 
   return (
     <div className="random-container">
-      <div className="randomCard">
-        <h3 className="cktname">{cocktail.strDrink}</h3>
-        <img
-          className="imgCkt"
-          src={cocktail.strDrinkThumb}
-          alt={cocktail.strDrink}
-        />
-      </div>
-
+      <CocktailCard key={cocktail.idDrink} initialData={cocktail} />
       <button className="btnrandom" type="button" onClick={fetchRandomCocktail}>
         🎲
       </button>
